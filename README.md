@@ -1,2 +1,2 @@
 # unee-css
-pure css framework clean and simple
+Pure css framework clean and simple
