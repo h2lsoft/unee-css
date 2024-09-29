@@ -21,11 +21,14 @@
   object-fit: contain;
   max-height: var(--list-image-height);
   transition: var(--list-image-transition);
+
+  border: var(--list-image-border);
 }
 
 
 .list-image a:hover img {
   opacity: var(--list-image-hover-opacity);
+  border-color: var(--list-image-hover-border-color);
 }
 
 .list-image-gray img {
