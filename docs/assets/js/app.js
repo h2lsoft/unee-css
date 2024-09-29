@@ -1,15 +1,21 @@
+var PAGE_LAST = '';
+var POPSTATE_IGNORE = false;
+
+
 $(function() {
 
-
 	$('menu.toc a').on('click', function (e) {
+
+		POPSTATE_IGNORE = true;
 		e.preventDefault();
 
-
 		document.location.hash = $(this).attr('href');
+		PAGE_LAST = document.location.hash;
 
 		page = $(this).attr('href');
 		page = page.replace('#', '');
 		page = page + '.html';
+
 
 
 
@@ -20,6 +26,7 @@ $(function() {
 		$('.page').html('loading...').load('page/' + page, function () {
 
 			uneeAnimatedObserve();
+			POPSTATE_IGNORE = false;
 
 			$('code.html').each(function () {
 
@@ -52,7 +59,7 @@ $(function() {
 			patterns = patterns.split(',');
 
 
-			const file = '../unee.css';
+			const file = 'https://cdn.jsdelivr.net/gh/h2lsoft/unee-css/dist/unee.css';
 			contents = $.get(file, function(contents){
 
 				let rootBlocks = contents.match(/:root\s*{([^}]*)}/g);
@@ -186,6 +193,29 @@ $(function() {
 	});
 
 
+
+	window.addEventListener('popstate', (event) => {
+
+		if(POPSTATE_IGNORE)return;
+
+		// anchor changes
+		let hash = document.location.hash;
+		$('menu.toc a[href="'+hash+'"]').click();
+
+		const target_selector  = $('menu.toc a[href="' + hash + '"]');
+
+		if(target_selector.length)
+		{
+			const target = $(target_selector);
+
+			$('menu.toc').scrollTop((target.offset().top - 20));
+
+		}
+
+
+
+
+	});
 
 
 
