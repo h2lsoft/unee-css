@@ -744,8 +744,10 @@
   /* component> list-image */
   --list-image-height: 100px;
   --list-image-gap: var(--gap-2);
+  --list-image-border: 1px solid var(--color-light);
   --list-image-transition: opacity 0.3s ease-in-out;
   --list-image-hover-opacity: 0.5;
+  --list-image-hover-border-color: var(--color-primary);
 
   --list-image-gray-transition:all 0.3s linear;
   --list-image-gray-opacity:0.3;
