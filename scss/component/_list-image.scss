@@ -21,10 +21,8 @@
   object-fit: contain;
   height: var(--list-image-height);
   transition: var(--list-image-transition);
-
   border: var(--list-image-border);
 }
-
 
 .list-image a:hover img {
   opacity: var(--list-image-hover-opacity);
