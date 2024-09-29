@@ -17,7 +17,8 @@
 }
 
 .list-image img {
-  object-fit: cover;
+  height: var(--list-image-height);
+  object-fit: contain;
   max-height: var(--list-image-height);
   transition: var(--list-image-transition);
 }
