@@ -32,10 +32,8 @@
 // row-cols-n
 @for $i from 1 through 12 {
   .row-cols-#{$i} {grid-template-columns: repeat(#{$i}, 1fr);}
-  //  .row-cols-#{$i} > * {max-width: #{100% / $i};}
-
-  @include generate-classes('gap-#{$i}') {
-	grid-template-columns: repeat(#{$i}, 1fr)!important;
+  @include generate-classes('row-cols-#{$i}') {
+	grid-template-columns: repeat(#{$i}, 1fr);
   }
 
 }
@@ -63,8 +61,19 @@
 .row.center {place-items: center; text-align: center}
 
 // nowrap
-.row.no-wrap {white-space: nowrap; display: flex;}
+.row.no-wrap {white-space: nowrap; display: flex; overflow:hidden; overflow-x:auto;}
 .row.no-wrap > * {flex: 0 0 auto;}
+
+@for $i from 1 through 12 {
+  .row.no-wrap.row-cols-#{$i}> * {width: calc(100% / #{$i});}
+  @include generate-classes('row.no-wrap.row-cols-#{$i} > *') {
+	width: calc(100% / #{$i})!important;
+  }
+
+}
+
+
+
 
 // row> col> padding
 .row.no-padding > *, .row.cols-no-padding > * {padding: 0!important;}
