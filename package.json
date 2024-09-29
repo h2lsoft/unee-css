@@ -21,9 +21,5 @@
   },
   "bugs": {
     "url": "https://github.com/h2lsoft/unee-css/issues"
-  },
-  "devDependencies": {
-    "postcss": "^8.4.47",
-    "postcss-cli": "^11.0.0"
   }
 }
