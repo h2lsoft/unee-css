@@ -1,0 +1,17 @@
+@include generate-classes('shadow', true){
+  box-shadow:var(--box-shadow)!important;
+}
+
+@include generate-classes('shadow-small', true){
+  box-shadow:var(--box-shadow-small)!important;
+}
+
+@include generate-classes('shadow-large', true){
+  box-shadow:var(--box-shadow-large)!important;
+}
+
+@include generate-classes('shadow-none', true){
+  box-shadow:var(--box-shadow-none)!important;
+}
+
+

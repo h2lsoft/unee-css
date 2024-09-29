@@ -1,0 +1,92 @@
+table
+{
+  width:100%;
+  text-align: var(--table-text-align);
+  border-collapse: collapse;
+  overflow: hidden;
+  overflow-x: auto;
+  margin: var(--table-margin);
+}
+
+table th {
+  padding: var(--table-th-padding);
+  font-size: var(--table-th-font-size);
+  font-weight:  var(--table-th-font-weight);
+  vertical-align:  var(--table-th-vertical-align);
+  border-bottom:  var(--table-th-border-bottom);
+}
+
+
+table.table-nowrap th, table.table-nowrap td {white-space: nowrap;}
+
+
+
+table td {
+  padding: var(--table-td-padding);
+  font-size: var(--table-td-font-size);
+  font-weight:  var(--table-td-font-weight);
+  vertical-align:  var(--table-td-vertical-align);
+  border-bottom:  var(--table-td-border-bottom);
+}
+
+table caption {
+
+  margin: var(--table-caption-margin);
+  padding: var(--table-caption-padding);
+
+  font-family: var(--table-caption-font-family), serif;
+  font-size: var(--table-caption-font-size);
+  font-weight: var(--table-caption-font-weight);
+  color: var(--table-caption-color);
+  background: var(--table-caption-background);
+  caption-side: var(--table-caption-side);
+}
+
+
+table.table-border th, table.table-border td {
+  border: var(--table-td-border);
+}
+
+table.table-condensed th, table.table-condensed td {
+  margin: var(--table-condensed-margin);
+  padding: var(--table-condensed-padding);
+  font-size: var(--table-condensed-font-size);
+}
+
+table.table-hover tr:hover> td {background: var(--table-hover-background);}
+
+
+table.table-zebra tr:nth-child(odd) > td{
+  background: var(--table-zebra-odd-background);
+  color: var(--table-zebra-odd-color);
+}
+
+
+table.table-zebra tr:nth-child(even)> td {
+  background: var(--table-zebra-even-background);
+  color: var(--table-zebra-event-color);
+
+}
+
+
+table.table-nowrap {
+  display: block;
+  padding-bottom: var(--table-nowrap-padding-bottom);
+}
+
+
+
+table tr.active > td {background: var(--table-tr-active-background); color: var(--table-tr-active-color);}
+table tr.success > td {background: var(--table-tr-success-background); color: var(--table-tr-success-color);}
+table tr.danger > td {background: var(--table-tr-danger-background); color: var(--table-tr-danger-color);}
+table tr.warning > td {background: var(--table-tr-warning-background); color: var(--table-tr-warning-color);}
+table tr.info > td {background: var(--table-tr-info-background); color: var(--table-tr-info-color);}
+table tr.dark > td {background: var(--table-tr-dark-background); color: var(--table-tr-dark-color);}
+table tr.light > td {background: var(--table-tr-light-background); color: var(--table-tr-light-color);}
+
+
+
+
+
+
+

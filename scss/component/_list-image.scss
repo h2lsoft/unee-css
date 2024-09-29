@@ -1,0 +1,40 @@
+.list-image
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: var(--list-image-height);
+  gap: var(--list-image-gap);
+}
+
+.list-image a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.list-image img {
+  object-fit: cover;
+  max-height: var(--list-image-height);
+  transition: var(--list-image-transition);
+}
+
+
+.list-image a:hover img {
+  opacity: var(--list-image-hover-opacity);
+}
+
+.list-image-gray img {
+  filter: grayscale(100%);
+  transition: var(--list-image-gray-transition);
+  opacity: var(--list-image-gray-opacity);
+}
+
+.list-image-gray a:hover img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+

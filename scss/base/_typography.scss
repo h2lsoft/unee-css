@@ -1,0 +1,240 @@
+body {
+  width: var(--body-width, 100vw);
+  margin: 0 auto;
+  overflow-x: var(--body-overflow-x);
+  overflow-y: var(--body-overflow-y);
+
+  font-family: var(--font-family), serif;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  padding-top: var(--body-padding-top);
+  padding-bottom: var(--body-padding-bottom);
+  background: var(--body-background);
+
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+/* links */
+a {
+  font-family: var(--link-font-family), serif;
+  padding: var(--link-padding);
+  color: var(--link-color);
+  font-weight: var(--link-font-weight);
+  text-decoration: var(--link-decoration);
+}
+
+a:hover {
+  text-decoration: var(--link-hover-decoration);
+  color: var(--link-hover-color);
+  font-weight: var(--link-hover-font-weight);
+}
+
+
+/* headings */
+hgroup h1, hgroup h2, hgroup h3, hgroup h4, hgroup h5, hgroup h6 {margin-bottom: 0; padding-bottom: 0;}
+
+hgroup {
+  margin: var(--hgroup-margin);
+  padding: var(--hgroup-padding);
+  background: var(--hgroup-background);
+  border: var(--hgroup-border);
+  border-radius: var(--border-radius);
+}
+
+hgroup > p
+{
+  margin: var(--hgroup-subtitle-margin);
+  padding: var(--hgroup-subtitle-padding);
+  font-family: var(--hgroup-subtitle-font-family), serif;
+  font-size: var(--hgroup-subtitle-font-size);
+  font-weight: var(--hgroup-subtitle-font-weight);
+  color: var(--hgroup-subtitle-color);
+  line-height: var(--hgroup-subtitle-line-height);
+
+}
+
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    margin: var(--h#{$i}-margin);
+    padding: var(--h#{$i}-padding);
+    font-family: var(--h#{$i}-font-family), serif;
+    font-size: var(--h#{$i}-font-size);
+    font-weight: var(--h#{$i}-font-weight);
+    color: var(--h#{$i}-color);
+    background: var(--h#{$i}-background);
+    border: var(--h#{$i}-border);
+    border-radius: var(--h#{$i}-border-radius);
+  }
+}
+
+/* text */
+strong, b, .bold, .b {font-weight: bold;}
+em, .em {font-style: italic}
+small, .small, .text-small {font-size: var(--font-size-small)!important;}
+.text-smaller {font-size: var(--font-size-smaller)!important;}
+.text-large {font-size: var(--font-size-large)!important;}
+.text-larger {font-size: var(--font-size-larger)!important;}
+
+
+/* html elements */
+p
+{
+  margin: 0;
+  padding: 0;
+  color: var(--p-color);
+  font-family: var(--p-font-family), serif;
+  font-size: var(--p-font-size);
+  font-weight: var(--p-font-weight);
+  line-height: var(--p-line-height);
+  background: var(--p-background);
+  border: var(--p-border);
+  border-radius: var(--p-border-radius);
+
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-top: var(--hr-height) var(--hr-style) var(--hr-color);
+  margin: var(--hr-margin);
+}
+
+
+/* dl, dt, dd */
+dl {
+  display: grid;
+  grid-template-columns: var(--dt-width) auto;
+  gap: var(--dl-gap);
+  margin: var(--dl-margin);
+  padding: var(--dl-padding);
+
+  background: var(--dl-background);
+  border: var(--dl-border);
+  border-radius: var(--dl-border-radius);
+}
+
+dt {
+
+  line-height: var(--dl-line-height);
+
+  grid-column-start: 1;
+  font-size: var(--dt-font-size);
+  font-weight: var(--dt-font-weight);
+  color: var(--dt-color);
+  background: var(--dt-color);
+  padding: var(--dt-padding);
+
+  background: var(--dt-background);
+  border: var(--dt-border);
+
+  text-align: var(--dt-text-align);
+}
+
+dd {
+
+  line-height: var(--dl-line-height);
+
+  grid-column-start: 2;
+  font-size: var(--dd-font-size);
+  color: var(--dd-color);
+  padding: var(--dd-padding);
+
+  font-weight: var(--dd-font-weight);
+  background: var(--dd-background);
+  border: var(--dd-border);
+
+  text-align: var(--dd-text-align);
+}
+
+
+kbd
+{
+  white-space: nowrap;
+  background: var(--kbd-background, #eee);
+  color: var(--kbd-color, #333);
+  font-family: var(--kbd-font-family, monospace, 'Courier New'), serif;
+  font-size: var(--kbd-font-size, var(--font-size-small));
+  padding: var(--kbd-padding, 2px 6px);
+  border: var(--kbd-border, 1px solid #b4b4b4);
+  border-radius: var(--kbd-border-radius, 5px);
+  box-shadow: var(--kbd-box-shadow, 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset);
+
+
+}
+
+
+code {
+  background: var(--code-background, #000);
+  color: var(--code-color, #fff);
+  font-family: var(--code-font-family, monospace, 'Courier New'), serif;
+  font-size: var(--code-font-size, var(--font-size-small));
+
+  display: block;
+  white-space:normal;
+
+  width: 100%;
+  margin: var(--code-margin, var(--unee-spacing-2) 0);
+  padding: var(--code-padding, 10px 15px);
+  border: var(--code-border, none);
+  border-radius: var(--code-border-radius, 5px);
+}
+
+
+blockquote {
+
+  max-width: var(--blockquote-max-width);
+  margin: var(--blockquote-margin);
+  padding: var(--blockquote-padding);
+
+  font-family: var(--blockquote-font-family), serif;
+  font-size: var(--blockquote-font-size);
+  font-weight: var(--blockquote-font-weight);
+  color: var(--blockquote-color);
+  text-align: var(--blockquote-text-align);
+  line-height: var(--blockquote-line-height);
+
+  background: var(--blockquote-background);
+
+  border-width:var(--blockquote-border-width);
+  border-color:var(--blockquote-border-color);
+  border-style:var(--blockquote-border-style);
+
+  border-radius:var(--blockquote-border-radius);
+
+}
+
+
+cite {
+
+  font-family: var(--cite-font-family), serif;
+  font-style: var(--cite-font-style, italic);
+  font-weight: var(--cite-font-weight, normal);
+  color: var(--cite-color, inherit);
+
+}
+
+blockquote cite
+{
+
+  font-family: var(--blockquote-cite-font-family), serif;
+  font-size: var(--blockquote-cite-font-size);
+  font-style: var(--blockquote-cite-font-style);
+  text-align: var(--blockquote-cite-text-align);
+  font-weight: var(--blockquote-cite-font-weight);
+  background: var(--blockquote-cite-background);
+  color: var(--blockquote-cite-color);
+
+  margin: var(--blockquote-cite-margin);
+  padding: var(--blockquote-cite-padding);
+
+  display: var(--blockquote-cite-display);
+
+}
+

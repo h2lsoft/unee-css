@@ -1,0 +1,39 @@
+section
+{
+  width: 100%;
+  clear: both;
+  display: block;
+  margin: var(--section-margin);
+  padding: var(--section-padding);
+  position: relative;
+
+  background-repeat: no-repeat!important;
+
+  background-size: cover;
+  background-position: center center;
+
+}
+
+.bg-fixed {background-attachment: fixed!important;}
+.bg-centered {background-position: center center;}
+.bg-top-centered {background-position: top center;}
+.bg-bottom-centered {background-position: bottom center;}
+
+.section-overlay-black, .section-overlay-white
+{
+  background-blend-mode: overlay;
+}
+
+
+.section-overlay-black {
+  background-color: rgb(0, 0, 0, 0.5);
+  color:white;
+}
+
+.section-overlay-white {
+  background-color: rgba(255,255,255, 0.8);
+  color:black;
+}
+
+.section-overlay-black p {color:white;}
+.section-overlay-white p {color:black;}

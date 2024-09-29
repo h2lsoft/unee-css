@@ -1,0 +1,19 @@
+@mixin generate-classes($class, $full:false) {
+
+  @if($full){
+	.#{$class} {@content;}
+  }
+
+
+  // mobile
+  @media only screen and (max-width: 767px)
+  {
+	.mobile-#{$class} {@content;}
+  }
+
+  // tablet
+  @media only screen and (min-width: 768px) and (max-width: 1023px)
+  {
+	.tablet-#{$class} {@content;}
+  }
+}

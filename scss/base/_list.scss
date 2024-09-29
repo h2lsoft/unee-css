@@ -1,0 +1,25 @@
+ul {
+  list-style: square;
+  list-style-position: inside;
+  line-height: calc(var(--unee-spacing) * 1.5);
+}
+
+ul ul {
+  list-style: circle;
+  margin: 0;
+  margin-bottom: calc(var(--unee-spacing) * 0);
+  margin-left: calc(var(--unee-spacing) * 2.5);
+}
+
+ol {
+  list-style: decimal;
+  list-style-position: inside;
+  line-height: calc(var(--unee-spacing) * 1.5);
+}
+
+ol ol {
+  margin: 0;
+  margin-bottom: calc(var(--unee-spacing) * 0);
+  margin-left: calc(var(--unee-spacing) * 2.5);
+}
+

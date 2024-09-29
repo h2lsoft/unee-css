@@ -1,0 +1,59 @@
+details {
+  user-select: none;
+  outline: none;
+  margin: var(--details-margin);
+}
+
+
+details summary {
+
+  background-color: var(--details-summary-background);
+  color: var(--details-summary-color);
+
+  width: 100%;
+  cursor: pointer;
+
+  padding: var(--details-summary-padding);
+  font-size: var(--details-font-size);
+  font-weight: var(--details-font-weight);
+
+  border-radius: var(--details-border-radius);
+  border:var(--details-border);
+}
+
+details > summary:hover
+{
+  background: var(--details-summary-hover-background);
+  color: var(--details-summary-hover-color);
+
+}
+
+
+details[open] > summary {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color:var(--details-summary-background);
+
+  background:var(--details-summary-open-background);
+  color:var(--details-summary-open-color);
+
+
+}
+
+
+details summary + * {
+
+  padding: var(--details-summary-content-padding);
+  font-size: var(--details-summary-content-font-size);
+  line-height: var(--details-summary-content-light-height);
+
+  border: var(--details-summary-content-border);
+  border-top: 0;
+
+
+}
+
+details[open] summary + * {
+
+
+}

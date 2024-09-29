@@ -1,0 +1,85 @@
+<hgroup>
+    <h1>Form</h1>
+    <p>Default inputs</p>
+</hgroup>
+
+<form method="post" action="" onsubmit="return false;">
+
+    <fieldset class="mb-2 bg-light">
+        <label class="text-dark"><input type="radio" name="extra_attribute" value="none" checked /> No attribute</label>
+        <label class="text-dark"><input type="radio" name="extra_attribute" value="disabled" /> Add attribute disabled</label>
+        <label class="text-danger"><input type="radio" name="extra_attribute" value="invalid" /> Add attribute :invalid</label>
+        <label class="text-success"><input type="radio" name="extra_attribute" value="valid" /> Add attribute :valid</label>
+    </fieldset>
+
+
+    <input type="text" placeholder="Name" class="mb-1" />
+    <input type="password" placeholder="Password" class="mb-1" />
+    <input type="email" placeholder="Email address" class="mb-1" />
+
+    <input type="email" placeholder="Email example (.no-icon)" class="mb-1 no-icon" />
+    <input type="text" placeholder="My custom icon (.with-icon)" class="mb-1 with-icon icon-custom" />
+
+
+    <input type="date" placeholder="Date" class="mb-1" />
+    <input type="time" placeholder="Time" class="mb-1" />
+    <input type="datetime-local" placeholder="Local" class="mb-1" />
+
+
+    <input type="tel" placeholder="Phone" class="mb-1" />
+    <input type="search" placeholder="Search..." class="mb-1" />
+    <input type="number" placeholder="Number" class="mb-1" />
+
+    <div class="mb-1">
+        <label>Range</label>
+        <input type="range" placeholder="Range" min="0" max="100" />
+    </div>
+
+    <input type="url" placeholder="Url" class="mb-1" />
+    <input type="color" class="mb-1" />
+    <input type="file" placeholder="File" class="mb-1" />
+
+
+    <select class="mb-1">
+        <option value="">Choose a value...</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
+
+    <textarea class="mb-1" placeholder="Enter your message..."></textarea>
+
+    <label>
+        <input type="checkbox" role="switch" /> I am a switch
+    </label>
+
+    <br>
+    <br>
+
+    <label>
+        <input type="checkbox" /> Checkbox 1
+    </label>
+
+    <br>
+    <br>
+
+    <fieldset>
+        <input type="radio" name="choice" id="choice_1" value="1" /> <label for="choice_1">Radio 1</label>
+        <input type="radio" name="choice" id="choice_2" value="2" /> <label for="choice_2">Radio 2</label>
+        <input type="radio" name="choice" id="choice_3" value="3" /> <label for="choice_3">Radio 3</label>
+    </fieldset>
+
+    <div class="row row-cols-2 center my-2">
+        <div class="col">
+            <input type="reset">
+        </div>
+        <div class="col">
+            <input type="submit">
+        </div>
+    </div>
+
+
+</form>
+
+
+<code class="css-variables" data-pattern="input"></code>

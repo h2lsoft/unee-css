@@ -1,0 +1,29 @@
+{
+  "name": "unee-css",
+  "version": "0.9.0",
+  "description": "A lightweight and customizable CSS framework",
+  "main": "dist/unee.css",
+  "scripts": {
+    "build": "sass scss/unee.scss dist/unee.css && sass scss/unee.scss --style compressed dist/unee.min.css"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "scss",
+    "responsive"
+  ],
+  "author": "H2lsoft <contact@h2lsoft.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/h2lsoft/unee-css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h2lsoft/unee-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/h2lsoft/unee-css/issues"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0"
+  }
+}

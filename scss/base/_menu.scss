@@ -1,0 +1,108 @@
+menu {
+  list-style: none none;
+  line-height: calc(var(--unee-spacing) * 1.5);
+  margin: var(--menu-margin);
+}
+
+menu ul {
+
+  list-style: square;
+  margin: 0;
+  margin-bottom: var(--unee-spacing-0);
+  margin-left: var(--unee-spacing);
+}
+
+
+menu {
+
+}
+
+menu li
+{
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+menu li span
+{
+  display: block;
+
+  background: var(--menu-title-background);
+
+  font-family: var(--menu-title-family), serif;
+  font-size: var(--menu-title-font-size);
+  font-weight: var(--menu-title-font-weight);
+  color: var(--menu-title-color);
+  padding: var(--menu-title-padding);
+
+  border-left:var(--menu-link-border);
+  border-right:var(--menu-link-border);
+
+}
+
+
+menu li a {
+  display: block;
+  width: 100%;
+  padding: var(--menu-link-padding);
+
+  font-family: var(--menu-link-font-family), serif;
+  font-size: var(--menu-link-font-size);
+  font-weight: var(--menu-link-font-weight);
+
+  color: var(--menu-link-color);
+  background: var(--menu-link-background);
+
+  border: var(--menu-link-border);
+  border-top-width: 0;
+}
+
+menu li a:hover {
+  color: var(--menu-link-hover-color);
+  background: var(--menu-link-hover-background);
+  border-color:var(--menu-link-hover-background);
+}
+
+
+menu li a.active {
+  color: var(--menu-link-active-color);
+  background: var(--menu-link-active-background);
+  border-color:var(--menu-link-active-background);
+}
+
+
+menu li a.disabled, menu li a[disabled]  {
+  color: var(--menu-link-disabled-color);
+  background: var(--menu-link-disabled-background);
+  border-color:var(--menu-link-disabled-background);
+}
+
+
+menu > li:first-child a {
+  border-top-width: var(--menu-link-border-width);
+  /*border-radius: var(--menu-link-first-border-radius);*/
+}
+
+menu > li:last-child a {
+  /*border-top-width: var(--menu-link-border-width);
+  border-radius: var(--menu-link-last-border-radius);*/
+}
+
+
+menu ul {
+  margin-left: 0;
+}
+
+/*
+menu.small span {
+  font-size: var(--menu-small-title-font-size);
+  padding: var(--menu-small-title-padding);
+}
+
+menu.small a {
+  font-size: var(--menu-small-link-font-size);
+  padding: var(--menu-small-link-padding);
+}
+s
+ */

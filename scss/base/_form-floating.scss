@@ -1,0 +1,130 @@
+.form-item {
+  margin-top: 20px;
+  position: relative
+}
+
+.form-item label {
+  pointer-events: none;
+  position: absolute;
+  font-size: 16px;
+  top: 15px;
+  left:15px;
+  color: #333;
+}
+
+.form-item small {color: #999; font-size: 14px; padding: 0 5px; display: block}
+
+.form-item input::placeholder, .form-item select::placeholder, .form-item textarea::placeholder  {opacity: 0;}
+
+.form-item input:required + label::after, .form-item select:required + label::after , .form-item textarea:required + label::after,
+.form-item fieldset .required::after
+{
+    content: "*";
+    margin-left:3px;
+    color: hotpink
+}
+
+.form-item input:not(:placeholder-shown) + label, .form-item select:not(:placeholder-shown) + label,
+.form-item textarea:not(:placeholder-shown) + label
+    {top:0px; font-size: 12px;}
+
+.form-item input:not(:placeholder-shown) + label::after, .form-item input:focus + label::after,
+.form-item select:not(:placeholder-shown) + label::after, .form-item select:focus + label::after,
+.form-item textarea:not(:placeholder-shown) + label::after, .form-item textarea:focus + label::after
+{
+  /*content: none; */
+}
+
+.form-item input:focus + label, .form-item select:focus + label, .form-item textarea:focus + label
+{ color: var(--input-focus-border-color);
+    top:0px;
+    font-size: 12px;
+}
+
+.form-item input[type=text], .form-item input[type=password], .form-item input[type=color], .form-item input[type=email], .form-item input[type=tel], .form-item input[type=number], .form-item input[type=search],
+.form-item input[type=date], .form-item input[type=datetime-local], .form-item input[type=week], .form-item input[type=month], .form-item input[type=url], .form-item input[type=file], .form-item input[type=time],
+.form-item textarea, .form-item select
+{
+  padding-top: 10px;
+  height: 60px;
+  line-height: normal;
+}
+
+/* idle */
+.form-item input:not(.no-icon):focus, .form-item input.with-icon:focus,
+.form-item input:not(.no-icon):not(:placeholder-shown) , .form-item input.with-icon:not(:placeholder-shown)
+{
+  background-position-y: 24px;
+}
+
+.form-item input[type="password"]:not(.no-icon):placeholder-shown + label,
+.form-item input[type="email"]:not(.no-icon):placeholder-shown + label,
+.form-item input[type="tel"]:not(.no-icon):placeholder-shown + label,
+.form-item input[type="url"]:not(.no-icon):placeholder-shown + label,
+.form-item input[type="search"]:not(.no-icon):placeholder-shown + label,
+.form-item input.with-icon:placeholder-shown + label
+{
+  left: 38px;
+}
+
+.form-item input[type="password"]:not(.no-icon):focus + label,
+.form-item input[type="email"]:not(.no-icon):focus + label,
+.form-item input[type="tel"]:not(.no-icon):focus + label,
+.form-item input[type="url"]:not(.no-icon):focus + label,
+.form-item input[type="search"]:not(.no-icon):focus + label,
+.form-item input.with-icon:focus + label
+{
+  left: 15px;
+}
+
+.form-item input[type="file"] {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.form-item select[multiple] {
+  padding-top: 30px;
+  padding-bottom: 0px;
+  height: auto;
+  min-height: auto;
+}
+
+.form-item select[multiple] option {
+  padding: 5px 5px;
+}
+
+.form-item textarea
+{
+  padding-top: 30px;
+  height: 8em;
+}
+
+
+.form-item fieldset {
+  height: auto;
+  position: relative;
+  padding: 10px 0px 20px 0;
+
+}
+.form-item fieldset legend {
+  font-size: 12px;
+  color: #333;
+
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+
+.form-item fieldset label
+{
+  position: inherit;
+  display: block;
+  padding: 0px;
+
+  pointer-events: auto;
+}
+
+.form-item fieldset:hover {border-color: var(--input-hover-border-color);}
+.form-item fieldset:focus-within {border-color: var(--input-focus-border-color)!important;}
+.form-item fieldset:focus-within legend  {color: var(--input-focus-border-color);}

@@ -1,0 +1,112 @@
+/* text */
+.text-white {color: #fff!important;}
+.text-black {color: #000!important;}
+.text-dark {color: var(--color-dark)!important;}
+.text-muted {color: var(--color-muted)!important;}
+.text-dark-light {color: var(--color-dark-light)!important;}
+.text-light {color: var(--color-light)!important;}
+
+.text-primary {color: var(--color-primary)!important;}
+.text-primary-light {color: var(--color-primary-light)!important;}
+.text-secondary {color: var(--color-secondary)!important;}
+.text-secondary-light {color: var(--color-secondary-light)!important;}
+.text-ternary {color: var(--color-ternary)!important;}
+.text-ternary-light {color: var(--color-ternary-light)!important;}
+
+.text-success {color: var(--color-success)!important;}
+.text-success-light {color: var(--color-success-light)!important;}
+.text-success-light-extra {color: var(--color-success-light-extra)!important;}
+
+.text-danger {color: var(--color-danger)!important;}
+.text-danger-light {color: var(--color-danger-light)!important;}
+.text-danger-light-extra {color: var(--color-danger-light-extra)!important;}
+
+.text-info {color: var(--color-info)!important;}
+.text-info-light {color: var(--color-info-light)!important;}
+.text-info-light-extra {color: var(--color-info-light-extra)!important;}
+
+.text-warning {color: var(--color-warning)!important;}
+.text-warning-light {color: var(--color-warning-light)!important;}
+.text-warning-light-extra {color: var(--color-warning-light-extra)!important;}
+
+.text-blue {color: var(--color-blue)!important;}
+.text-indigo {color: var(--color-indigo)!important;}
+.text-purple {color: var(--color-purple)!important;}
+.text-pink {color: var(--color-pink)!important;}
+.text-red {color: var(--color-red)!important;}
+.text-orange {color: var(--color-orange)!important;}
+.text-yellow {color: var(--color-yellow)!important;}
+.text-green {color: var(--color-green)!important;}
+.text-teal {color: var(--color-teal)!important;}
+.text-cyan {color: var(--color-cyan)!important;}
+
+/* background */
+.bg-primary {background-color: var(--color-primary)!important;}
+.bg-primary-light {background-color: var(--color-primary-light)!important;}
+
+.bg-secondary {background-color: var(--color-secondary)!important;}
+.bg-secondary-light {background-color: var(--color-secondary-light)!important;}
+
+.bg-ternary {background-color: var(--color-ternary)!important;}
+.bg-ternary-light {background-color: var(--color-ternary-light)!important;}
+
+.bg-success {background-color: var(--color-success)!important;}
+.bg-danger {background-color: var(--color-danger)!important;}
+.bg-info {background-color: var(--color-info)!important;}
+.bg-warning {background-color: var(--color-warning)!important;}
+.bg-dark {background-color: var(--color-dark)!important;}
+.bg-light {background-color: var(--color-light)!important;}
+.bg-black {background-color: black!important;}
+.bg-white {background-color: white!important;}
+
+.bg-blue {background-color: var(--color-blue)!important;}
+.bg-indigo {background-color: var(--color-indigo)!important;}
+.bg-purple {background-color: var(--color-purple)!important;}
+.bg-pink {background-color: var(--color-pink)!important;}
+.bg-red {background-color: var(--color-red)!important;}
+.bg-orange {background-color: var(--color-orange)!important;}
+.bg-yellow {background-color: var(--color-yellow)!important;}
+.bg-green {background-color: var(--color-green)!important;}
+.bg-teal {background-color: var(--color-teal)!important;}
+.bg-cyan {background-color: var(--color-cyan)!important;}
+
+
+
+$colors: (primary, secondary, ternary, success, danger, info, warning, black);
+@each $color in $colors {
+
+  .bg-#{$color}-0 {background-color: var(--color-#{$color})!important;}
+  .bg-#{$color}-10 {background-color: color-mix(in srgb, var(--color-#{$color}) 10%, transparent)!important;}
+  .bg-#{$color}-20 {background-color: color-mix(in srgb, var(--color-#{$color}) 20%, transparent)!important;}
+  .bg-#{$color}-30 {background-color: color-mix(in srgb, var(--color-#{$color}) 30%, transparent)!important;}
+  .bg-#{$color}-40 {background-color: color-mix(in srgb, var(--color-#{$color}) 40%, transparent)!important;}
+  .bg-#{$color}-50 {background-color: color-mix(in srgb, var(--color-#{$color}) 50%, transparent)!important;}
+  .bg-#{$color}-60 {background-color: color-mix(in srgb, var(--color-#{$color}) 60%, transparent)!important;}
+  .bg-#{$color}-70 {background-color: color-mix(in srgb, var(--color-#{$color}) 70%, transparent)!important;}
+  .bg-#{$color}-80 {background-color: color-mix(in srgb, var(--color-#{$color}) 80%, transparent)!important;}
+  .bg-#{$color}-90 {background-color: color-mix(in srgb, var(--color-#{$color}) 90%, transparent)!important;}
+  .bg-#{$color}-100 {background-color: color-mix(in srgb, var(--color-#{$color}) 100%, transparent)!important;}
+
+  .text-#{$color}-0 {color: var(--color-#{$color})!important;}
+  .text-#{$color}-10 {color: color-mix(in srgb, var(--color-#{$color}) 10%, white)!important;}
+  .text-#{$color}-20 {color: color-mix(in srgb, var(--color-#{$color}) 20%, white)!important;}
+  .text-#{$color}-30 {color: color-mix(in srgb, var(--color-#{$color}) 30%, white)!important;}
+  .text-#{$color}-40 {color: color-mix(in srgb, var(--color-#{$color}) 40%, white)!important;}
+  .text-#{$color}-50 {color: color-mix(in srgb, var(--color-#{$color}) 50%, white)!important;}
+  .text-#{$color}-60 {color: color-mix(in srgb, var(--color-#{$color}) 60%, white)!important;}
+  .text-#{$color}-70 {color: color-mix(in srgb, var(--color-#{$color}) 70%, white)!important;}
+  .text-#{$color}-80 {color: color-mix(in srgb, var(--color-#{$color}) 80%, white)!important;}
+  .text-#{$color}-90 {color: color-mix(in srgb, var(--color-#{$color}) 90%, white)!important;}
+  .text-#{$color}-100 {color: color-mix(in srgb, var(--color-#{$color}) 100%, white)!important;}
+
+
+}
+
+
+
+
+
+
+
+
+

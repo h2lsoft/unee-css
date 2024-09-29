@@ -1,0 +1,25 @@
+video {
+
+        margin: var(--video-margin);
+        padding: var(--video-padding);
+
+        width: var(--video-width);
+        max-width: var(--video-max-width);
+
+        height: var(--video-height);
+        max-height: var(--video-max-height);
+
+
+}
+
+audio {
+  margin: var(--audio-margin);
+  padding: var(--audio-padding);
+
+  width: var(--audio-width);
+  max-width: var(--audio-max-width);
+
+  height: var(--audio-height);
+  max-height: var(--audio-max-height);
+
+}

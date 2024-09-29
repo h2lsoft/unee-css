@@ -1,0 +1,76 @@
+// row
+.row {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-row-gap-default);
+}
+
+
+// .col-*
+@for $i from 1 through 12 {
+
+  // @media query
+  .col-#{$i} {grid-column: span #{$i};}
+  @include generate-classes('col-#{$i}') {
+	grid-column: span #{$i}!important;
+  }
+
+}
+
+
+// gap
+@for $i from 0 through 5 {
+  .gap-#{$i} {gap: var(--gap-#{$i});}
+  @include generate-classes('gap-#{$i}') {
+	gap: var(--gap-#{$i})!important;
+  }
+}
+
+
+
+// row-cols-n
+@for $i from 1 through 12 {
+  .row-cols-#{$i} {grid-template-columns: repeat(#{$i}, 1fr);}
+  //  .row-cols-#{$i} > * {max-width: #{100% / $i};}
+
+  @include generate-classes('gap-#{$i}') {
+	grid-template-columns: repeat(#{$i}, 1fr)!important;
+  }
+
+}
+
+// offset
+@for $offset from 0 through 11 {
+  @for $col from 1 through 12 {
+	@if ($col + $offset <= 12) {
+
+	  .offset-col-#{$offset}.col-#{$col} {grid-column: #{$offset + 1} / span #{$col};}
+
+	  @include generate-classes('offset-col-#{$offset}.col-#{$col}') {
+		grid-column: #{$offset + 1} / span #{$col}!important;
+	  }
+
+	}
+  }
+}
+
+
+// utils
+
+// @media query
+.row > * {padding: var(--grid-column-padding);}
+.row.center {place-items: center; text-align: center}
+
+// nowrap
+.row.no-wrap {white-space: nowrap; display: flex;}
+.row.no-wrap > * {flex: 0 0 auto;}
+
+// row> col> padding
+.row.no-padding > *, .row.cols-no-padding > * {padding: 0!important;}
+.row.cols-padding-thin > * {padding: var(--grid-column-padding-thin);}
+
+
+
+
+

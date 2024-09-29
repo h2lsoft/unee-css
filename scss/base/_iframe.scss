@@ -1,0 +1,8 @@
+iframe {
+
+  width: 100%;
+  margin: var(--iframe-margin);
+  border: var(--iframe-border);
+  border-radius: var(--iframe-border-radius);
+  min-height: var(--iframe-min-height);
+}

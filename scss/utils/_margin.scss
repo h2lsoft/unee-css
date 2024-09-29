@@ -1,0 +1,27 @@
+@for $i from 0 through 5 {
+
+  @include generate-classes("m-#{$i}", true){margin: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("my-#{$i}", true){margin-top: var(--unee-spacing-#{$i})!important; margin-bottom: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("mx-#{$i}", true){margin-left: var(--unee-spacing-#{$i})!important; margin-right: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("mt-#{$i}", true){margin-top: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("ml-#{$i}", true){margin-left: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("ms-#{$i}", true){margin-left: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("mr-#{$i}", true){margin-right: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("me-#{$i}", true){margin-right: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("mb-#{$i}", true){margin-bottom: var(--unee-spacing-#{$i})!important;}
+
+}
+
+
+@include generate-classes("m-auto", true){margin: auto!important;}
+@include generate-classes("mx-auto", true){margin-left: auto!important; margin-right: auto!important;}
+@include generate-classes("my-auto", true){margin-top: auto!important; margin-bottom: auto!important;}
+@include generate-classes("mt-auto", true){margin-top: auto!important;}
+@include generate-classes("mr-auto", true){margin-right: auto!important;}
+@include generate-classes("me-auto", true){margin-right: auto!important;}
+@include generate-classes("mb-auto", true){margin-bottom: auto!important;}
+@include generate-classes("ml-auto", true){margin-left: auto!important;}
+@include generate-classes("ms-auto", true){margin-left: auto!important;}
+
+
+

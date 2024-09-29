@@ -1,0 +1,145 @@
+<hgroup>
+    <h1>Floating label</h1>
+    <p>wrap your input with <em>.form-item</em></p>
+</hgroup>
+
+
+<form method="post" action="" onsubmit="return false;">
+
+    <fieldset class="mb-2 bg-light">
+        <label class="text-dark"><input type="radio" name="extra_attribute" value="none" checked /> No attribute</label>
+        <label class="text-dark"><input type="radio" name="extra_attribute" value="disabled" /> Add attribute disabled</label>
+        <label class="text-danger"><input type="radio" name="extra_attribute" value="invalid" /> Add attribute :invalid</label>
+        <label class="text-success"><input type="radio" name="extra_attribute" value="valid" /> Add attribute :valid</label>
+    </fieldset>
+
+
+    <div class="form-item">
+        <input type="text" placeholder="name" required />
+        <label>Your name</label>
+    </div>
+
+    <div class="form-item">
+        <input type="password" placeholder="password" required value="" />
+        <label>Password</label>
+    </div>
+
+    <div class="form-item">
+        <input type="email" placeholder="Email address" required />
+        <label>Email</label>
+    </div>
+
+    <div class="form-item">
+        <input type="tel" placeholder="Phone" required />
+        <label>Phone</label>
+        <p class="small">Format 5555-555-555</p>
+    </div>
+
+    <div class="form-item">
+        <input type="url" placeholder="Website url" required />
+        <label>Website url</label>
+    </div>
+
+    <div class="form-item">
+        <input type="number" placeholder="Number" min="0" max="10" required />
+        <label>Pet N°</label>
+    </div>
+
+    <div class="form-item">
+        <input type="file" placeholder="Pdf file" accept="application/pdf" required />
+        <label>Pdf file</label>
+        <p class="small">Pdf file (max 5 mo)</p>
+    </div>
+
+
+    <div class="row no-padding row-cols-3">
+
+        <div class="col">
+            <div class="form-item">
+                <input type="date" placeholder="Date" required />
+                <label>Date</label>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-item">
+                <input type="time" placeholder="Time" required />
+                <label>Time</label>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-item">
+                <input type="datetime-local" placeholder="Datetime local" required />
+                <label>Datetime local</label>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="form-item">
+        <select placeholder="Number of childs" required>
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <label>Number of childs</label>
+    </div>
+
+    <div class="form-item">
+        <select multiple placeholder="Preferred colors" required>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+        <label>Preferred colors</label>
+    </div>
+
+
+    <div class="form-item">
+        <textarea placeholder="Message..." required></textarea>
+        <label>Message</label>
+    </div>
+
+
+    <div class="form-item">
+        <fieldset>
+            <legend class="required">Radio group</legend>
+
+            <label>
+                <input type="radio" name="choice" value="1"> Choice 1
+            </label>
+
+            <label>
+                <input type="radio" name="choice" value="2"> Choice 2
+            </label>
+
+            <label>
+                <input type="radio" name="choice" value="3"> Choice 3
+            </label>
+        </fieldset>
+    </div>
+
+    <div class="form-item">
+        <fieldset>
+            <legend class="required">Checkbox group</legend>
+
+            <label>
+                <input type="checkbox" name="colors[]" value="1"> Red
+            </label>
+
+            <label>
+                <input type="checkbox" name="colors[]" value="2"> Green
+            </label>
+
+            <label>
+                <input type="checkbox" name="colors[]" value="3"> Blue
+            </label>
+        </fieldset>
+    </div>
+
+
+
+</form>

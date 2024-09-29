@@ -1,0 +1,134 @@
+<hgroup>
+    <h1>Animated</h1>
+    <p>Add simple animation element on scroll</p>
+</hgroup>
+
+<div class="row text-center row-cols-6 delay-0s">
+
+    <div class="col bg-light border">
+        <div class="animated animated-fade">fade</div>
+    </div>
+
+    <div class="col bg-light border">
+        <div class="animated animated-left">left</div>
+    </div>
+
+    <div class="col bg-light border">
+        <div class="animated animated-right">right</div>
+    </div>
+
+    <div class="col bg-light border">
+        <div class="animated animated-up">up</div>
+    </div>
+
+    <div class="col bg-light border">
+        <div class="animated animated-down">down</div>
+    </div>
+
+    <div class="col bg-light border">
+        <div class="animated animated-zoom">zoom</div>
+    </div>
+
+    <div class="col bg-light border">
+        <div class="animated animated-zoom-out">zoom-out</div>
+    </div>
+
+</div>
+
+<section class="section-overlay-black bg-black">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-4">
+                <img class="rounded-large animated animated-zoom" src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?q=80&w=500&h=500&auto=format&fit=crop">
+            </div>
+            <div class="col-8">
+                <hgroup>
+                    <h1 class="animated animated-right">This is my title</h1>
+                    <p class="pt-1 text-larger text-light animated animated-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, quia, vel!</p>
+
+                    <div class="my-1">
+                        <a href="#" class="button primary large animated animated-zoom">call to action</a>
+                    </div>
+
+
+                </hgroup>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section-overlay-white bg-success-10">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="offset-col-2 col-8 text-center">
+                <hgroup>
+                    <h1 class="animated animated-zoom">This is my title</h1>
+                    <p class="pt-1 text-larger text-black-50 animated animated-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, quia, vel!</p>
+
+                    <div class="my-1">
+                        <a href="#" class="button success large animated animated-zoom-out">call to action</a>
+                    </div>
+                </hgroup>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<code class="html">
+<div class="animated animated-left">
+    Animation on left
+</div>
+</code>
+
+<p>Please add this JS function, to execute animation on viewport</p>
+<code class="html">
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries, obs) =>
+        entries.forEach(e => e.isIntersecting && (e.target.classList.add('animated-executed'), obs.unobserve(e.target)),
+            { threshold: 0.8})
+    );
+    document.querySelectorAll('.animated').forEach(el => observer.observe(el));
+});
+</script>
+</code>
+
+
+
+<div class="box">
+    <header>Useful classes</header>
+    <main>
+
+        <p class="text-muted text-smaller">You can put on element directly or on parent element to apply to all children</p>
+        <dl>
+            <dt>.delay-0s</dt>
+            <dd>remove delay</dd>
+
+            <dt>.delay-1s</dt>
+            <dd>add delay 1s</dd>
+
+            <dt>.delay-2s</dt>
+            <dd>add delay 2s</dd>
+
+            <dt>.delay-3s</dt>
+            <dd>add delay 3s</dd>
+
+            <dt>.delay-4s</dt>
+            <dd>add delay 4s</dd>
+
+            <dt>.delay-5s</dt>
+            <dd>add delay 5s</dd>
+        </dl>
+    </main>
+</div>
+
+
+
+<code class="css-variables" data-pattern="animated"></code>
+
+

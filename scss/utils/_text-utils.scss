@@ -1,0 +1,17 @@
+@include generate-classes('text-mini', true){font-size: var(--font-size-mini)!important;}
+@include generate-classes('text-tiny', true){font-size: var(--font-size-mini)!important;}
+@include generate-classes('text-small', true){font-size: var(--font-size-small)!important;}
+@include generate-classes('text-smaller', true){font-size: var(--font-size-smaller)!important;}
+@include generate-classes('text-normal', true){font-size: var(--font-size)!important;}
+@include generate-classes('text-larger', true){font-size: var(--font-size-larger)!important;}
+@include generate-classes('text-large', true){font-size: var(--font-size-large)!important;}
+
+@include generate-classes('uppercase', true){text-transform: uppercase!important;}
+@include generate-classes('upper', true){text-transform: uppercase!important;}
+
+
+@include generate-classes('lowercase', true){text-transform: lowercase!important;}
+@include generate-classes('lower', true){text-transform: lowercase!important;}
+
+@include generate-classes('capitalize', true){text-transform: capitalize!important;}
+@include generate-classes('cap', true){text-transform: capitalize!important;}

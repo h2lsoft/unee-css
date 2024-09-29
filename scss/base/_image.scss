@@ -1,0 +1,41 @@
+img {max-width: 100%; width: 100%; margin: var(--img-margin); padding: var(--img-padding);
+
+  border-radius: var(--img-border-radius);
+}
+
+
+figure {margin: var(--figure-margin); padding: var(--figure-padding); border:var(--figure-border); border-radius: var(--figure-border-radius);}
+
+figure img {max-width: 100%; width: 100%; margin: var(--figure-img-margin); padding: var(--figure-img-padding);
+
+  border-radius: var(--figure-img-border-radius);
+
+}
+figure figcaption
+{
+  font-size: var(--figure-caption-font-size);
+  text-align: var(--figure-caption-text-align);
+  padding: var(--figure-caption-padding);
+  color: var(--color-dark);
+}
+
+
+.img-avatar {
+    box-shadow: var(--img-avatar-box-shadow, none);
+    object-fit: var(--img-avatar-object-fil, cover);
+    width: var(--img-avatar-width, 60px);
+    height: var(--img-avatar-width, 60px);
+    border:var(--img-avatar-border, 2px solid #ccc);
+    border-radius: var(--img-avatar-border-radius, 50%);
+}
+
+.img-avatar.large {
+  width: var(--img-avatar-large-width, 90px);
+  height: var(--img-avatar-large-width, 90px);
+}
+
+.img-avatar.small {
+  width: var(--img-avatar-small-width, 45px);
+  height: var(--img-avatar-small-width, 45px);
+}
+

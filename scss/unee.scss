@@ -1,0 +1,148 @@
+/*$breakpoints: (
+		mobile: 768px,
+		tablet: 1024px
+);*/
+
+$sizes : (auto, 100,75,50,33,25,0);
+
+// simple utility
+$utilities : (
+
+  // display
+  "d": (
+		  "property": 'display',
+		  "value": ((none, block, inline, inline-block, grid, flex, table, table-cell, table-row, table-caption))
+  ),
+
+  // text
+  "text": (
+		  "property": ('text-align', 'white-space'),
+		  "value": ((left, center, right, justify), (wrap, nowrap, preserve-breaks, preserve-line, pre))
+  ),
+
+  // overflow
+  "overflow": (
+		  "property": (overflow),
+		  "value": (auto, hidden, scroll, visible)
+  ),
+
+  // overflow-x
+  "overflow-x": (
+		  "property": (overflow-x),
+		  "value": (auto, hidden, scroll, visible)
+  ),
+
+  // overflow-y
+  "overflow-y": (
+		  "property": (overflow-x),
+		  "value": (auto, hidden, scroll, visible)
+  ),
+
+  // user-select
+  "user-select": (
+		  "property": 'user-select',
+		  "value": ((none, auto, text, all)),
+  ),
+
+  // pointer-events
+  "pointer-events": (
+		  "property": 'pointer-events',
+		  "value": ((none, auto)),
+  ),
+
+
+);
+
+
+
+@import '_vars';
+@import '_mixins';
+
+@import 'base/_reset';
+@import 'base/_scrollbars';
+
+/* base */
+@import 'base/_typography';
+@import 'base/_list';
+@import 'base/_menu';
+@import 'base/_iframe';
+@import 'base/_media';
+@import 'base/_image';
+@import 'base/_details';
+@import 'base/_table';
+@import 'base/_section';
+
+/* form */
+@import 'base/_button';
+@import 'base/_form';
+@import 'base/form-floating';
+
+
+/* component */
+@import 'component/_navbar';
+@import 'component/_breadcrumbs';
+@import 'component/_box';
+@import 'component/_list-image';
+@import 'component/_page-loader';
+
+@import 'component/_marquee';
+@import 'component/_slideshow';
+@import 'component/_carousel';
+@import 'component/_animated';
+
+
+@import 'layout/_breakpoints';
+
+@import 'utils/_colors';
+@import 'utils/_border';
+@import 'utils/_opacity';
+@import 'layout/_grid';
+
+/* utils - responsive */
+@import 'utils/_shadow';
+@import 'utils/_text-utils';
+@import 'utils/_margin';
+@import 'utils/_padding';
+@import 'utils/_size';
+
+
+
+
+
+@each $utility, $map in $utilities {
+  $properties: map-get($map, "property");
+  $values: map-get($map, "value");
+
+  @if type-of($properties) == "list" {
+	@each $property in $properties {
+	  @each $value in nth($values, index($properties, $property)) {
+
+		.#{$utility}-#{$value} {
+		  #{$property}: #{$value}!important;
+		}
+
+		@include generate-classes("#{$utility}-#{$value}") {
+		  #{$property}: #{$value}!important;
+		}
+
+	  }
+	}
+  } @else {
+	@each $value in $values {
+
+	  .#{$utility}-#{$value} {
+		#{$properties}: #{$value}!important;
+	  }
+
+	  @include generate-classes("#{$utility}-#{$value}") {
+		#{$properties}: #{$value}!important;
+	  }
+
+	}
+  }
+}
+
+
+
+
+

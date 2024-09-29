@@ -1,0 +1,62 @@
+.border {border: 1px solid var(--color-light);}
+.border-y {border-top: 1px solid var(--color-light); border-bottom: 1px solid var(--color-light);}
+.border-x {border-left: 1px solid var(--color-light); border-right: 1px solid var(--color-light);}
+
+.border-l, .border-s  {border-left: 1px solid var(--color-light);}
+.border-r, .border-e  {border-right: 1px solid var(--color-light);}
+.border-t {border-top: 1px solid var(--color-light);}
+.border-b {border-bottom: 1px solid var(--color-light);}
+
+.border-transparent {border-color:transparent;}
+
+.border-light {border-color:var(--color-light);}
+.border-light {border-color:var(--color-light);}
+
+.border-primary {border-color:var(--color-primary);}
+.border-primary-light {border-color:var(--color-primary-light);}
+
+.border-secondary {border-color:var(--color-secondary);}
+.border-secondary-light {border-color:var(--color-secondary-light);}
+
+.border-ternary {border-color:var(--color-ternary);}
+.border-ternary-light {border-color:var(--color-ternary-light);}
+
+.border-info {border-color:var(--color-info);}
+.border-info-light {border-color:var(--color-info-light);}
+.border-info-light-extra {border-color:var(--color-info-light-extra);}
+
+.border-success {border-color:var(--color-success);}
+.border-success-light {border-color:var(--color-success-light);}
+.border-success-light-extra {border-color:var(--color-success-light-extra)!important;}
+
+.border-danger {border-color:var(--color-danger);}
+.border-danger-light {border-color:var(--color-danger-light);}
+.border-danger-light-extra {border-color:var(--color-danger-light-extra)!important;}
+
+.border-warning {border-color:var(--color-warning);}
+.border-warning-light {border-color:var(--color-warning-light);}
+.border-warning-light-extra {border-color:var(--color-warning-light-extra)!important;}
+
+.border-dark {border-color:var(--color-dark-);}
+.border-dark-light {border-color:var(--color-dark-light);}
+.border-dark-light-extra {border-color:var(--color-dark-light-extra);}
+
+
+.border-0 {border-width:0;}
+.border-1 {border-width:1px;}
+.border-2 {border-width:2px;}
+.border-3 {border-width:3px;}
+.border-4 {border-width:4px;}
+.border-5 {border-width:5px;}
+
+.rounded-0 {border-radius: 0!important;}
+.rounded {border-radius: 5px;}
+.rounded-large {border-radius: 25px;}
+
+
+.circle {border-radius: 50%;}
+
+
+
+
+

@@ -1,0 +1,209 @@
+nav
+{
+  position: var(--navbar-position);
+  z-index: var(--navbar-z-index);
+  top: var(--navbar-top);
+  left: var(--navbar-left);
+  width: var(--navbar-width);
+  height: var(--navbar-height);
+  line-height: var(--navbar-line-height);
+  background:  var(--navbar-background);
+  box-shadow: var(--navbar-box-shadow);
+  overflow: hidden;
+}
+
+nav .container {
+  display: grid;
+  grid-template-columns: var(--navbar-grid-template-columns);
+  gap:var(--navbar-grid-gap);
+  align-items: var(--navbar-align-items);
+  justify-content: var(--navbar-justify-content);
+}
+
+
+
+
+nav .brand
+{
+  display: block;
+  width: var(--navbar-brand-width);
+  height: var(--navbar-brand-height);
+  max-height: var(--navbar-brand-height);
+  background: var(--navbar-brand-background);
+}
+
+nav .brand img {
+
+  max-width: 100%;
+  height: 100%;
+  max-height: var(--navbar-height);
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: var(--navbar-brand-object-position);
+}
+
+nav ul {
+
+  margin: var(--navbar-menu-margin);
+  padding: var(--navbar-menu-padding);
+  display: flex;
+  background: var(--navbar-menu-background);
+  height: var(--navbar-height);
+
+}
+
+nav ul li {
+  list-style: none;
+  border: 0;
+  flex: auto;
+  height: 100%;
+  align-content: var(--navbar-menu-link-vertical-align);
+  text-align: var(--navbar-menu-link-text-align);
+  background: var(--navbar-menu-link-background);
+}
+
+nav ul li a {
+
+  margin: var(--navbar-menu-link-margin);
+  padding: var(--navbar-menu-link-padding);
+
+  font-family: var(--navbar-menu-link-font-family), serif;
+  font-size: var(--navbar-menu-link-font-size);
+  font-weight: var(--navbar-menu-link-font-weight);
+  color: var(--navbar-menu-link-color);
+  line-height: normal;
+  text-transform: var(--navbar-menu-link-text-transform);
+
+  background: var(--navbar-menu-link-background);
+  border: 0;
+  border-radius: 0;
+
+
+}
+
+nav ul li a:hover {
+  background: var(--navbar-menu-link-hover-background);
+  color: var(--navbar-menu-link-hover-color);
+}
+
+nav ul .button {
+  height: auto;
+  padding: var(--navbar-menu-link-buton-padding);
+}
+
+
+nav input[type=checkbox] {display:none;}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+  nav {width: 100vw; height: var(--navbar-mobile-height);}
+  nav .container {grid-template-columns: var(--navbar-mobile-brand-width) 1fr;}
+  nav .brand {width: var(--navbar-mobile-brand-width); max-height: var(--navbar-mobile-height);}
+
+
+  nav input[type=checkbox]
+  {
+
+    display: block;
+    position: fixed;
+    z-index: var(--navbar-mobile-button-close-z-index);
+    top: var(--navbar-mobile-button-close-top);
+    right: var(--navbar-mobile-button-close-right);
+
+
+    width: var(--navbar-mobile-button-close-width);
+    height: var(--navbar-mobile-button-close-height);
+
+    border: var(--navbar-mobile-button-close-border);
+    border-radius: var(--navbar-mobile-button-close-border-radius);
+    appearance: none!important;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/> </svg>');
+    background-color: transparent;
+    background-repeat: no-repeat!important;
+    background-position: center center;
+    background-size: contain;
+    font-weight: normal;
+    color: var(--navbar-mobile-button-close-color);
+    transition: var(--navbar-mobile-button-close-transition);
+    opacity: 1;
+
+  }
+
+  nav input[type=checkbox]:checked
+  {
+    opacity: var(--navbar-mobile-opened-button-close-opacity);
+    color: var(--navbar-mobile-opened-button-close-color);
+    background-color: var(--navbar-mobile-opened-button-close-background);
+    border-color: var(--navbar-mobile-opened-button-close-border-color);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"> <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/> </svg>');
+    background-size: contain;
+    z-index: var(--navbar-mobile-opened-button-close-z-index);
+    width: var(--navbar-mobile-opened-button-close-width);
+    height: var(--navbar-mobile-opened-button-close-height);
+  }
+
+  nav input[type=checkbox]:hover, nav input[type=checkbox]:active {
+
+    opacity: var(--navbar-mobile-opened-button-close-active-opacity);
+    border: var(--navbar-mobile-button-close-border);
+    border-radius: var(--navbar-mobile-button-close-border-radius);
+
+  }
+
+
+  nav ul {
+
+    position: fixed;
+    z-index: var(--navbar-mobile-opened-z-index);
+    padding: var(--navbar-mobile-opened-padding);
+    top: 0;
+    width: 110%;
+    height: 100vh;
+    max-height: 100vh;
+
+    background: var(--navbar-mobile-opened-background);
+    overflow: hidden!important;
+    overflow-y: scroll!important;
+
+    display: block;
+    transition:  var(--navbar-mobile-opened-transition);
+    left: -110vw;
+    opacity: 1;
+
+  }
+
+
+  nav input[type=checkbox]:checked + ul {left: 0; opacity: 1;}
+  nav ul li {display: block; height: auto;}
+
+
+  nav ul li a {
+    display: block;
+    border: 0;
+    text-align: var(--navbar-mobile-opened-link-text-align);
+    margin: var(--navbar-mobile-opened-link-margin);
+    padding: var(--navbar-mobile-opened-link-padding);
+    font-size: var(--navbar-mobile-opened-link-font-size);
+    font-weight: var(--navbar-mobile-opened-link-font-weight);
+    background: var(--navbar-mobile-opened-link-background);
+
+  }
+
+  nav ul li a:hover, nav ul li a:active  {
+    background: var(--navbar-mobile-opened-link-active-background);
+    color: var(--navbar-mobile-opened-link-active-color);
+  }
+
+
+  nav ul li a.button {
+    display: inline-block;
+    margin: var(--navbar-mobile-opened-link-button-margin);
+    width: var(--navbar-mobile-opened-link-button-width);
+  }
+
+}
+

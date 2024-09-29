@@ -1,0 +1,47 @@
+.animated {
+
+    opacity: 0;
+    animation-play-state: paused;
+    animation-delay: var(--animated-delay);
+    animation-duration: var(--animated-duration);
+    animation-fill-mode: forwards;
+    animation-iteration-count: var(--animation-iteration-count);
+    animation-timing-function: var(--animated-timing-function);
+}
+
+.animated-fade {animation-name: animated-fade;}
+.animated-left {animation-name: animated-left;}
+.animated-right {animation-name: animated-right;}
+.animated-up {animation-name: animated-up;}
+.animated-down {animation-name: animated-down;}
+
+.animated-zoom, .animated-zoom-in {animation-name: animated-zoom-in;}
+.animated-zoom-out {animation-name: animated-zoom-out;}
+
+
+.animated-executed {
+  animation-play-state: running;
+
+}
+
+
+.animated.delay-0s, .delay-0s .animated {animation-delay: 0s;}
+.animated.delay-1s, .delay-1s .animated {animation-delay: 1s;}
+.animated.delay-2s, .delay-2s .animated {animation-delay: 2s;}
+.animated.delay-3s, .delay-3s .animated {animation-delay: 3s;}
+.animated.delay-4s, .delay-4s .animated {animation-delay: 4s;}
+.animated.delay-5s, .delay-5s .animated {animation-delay: 5s;}
+
+.animated-infinite .animated, .animated-infinite .animated {animation-iteration-count:infinite;}
+
+
+
+@keyframes animated-fade {0% {opacity: 0;} 100% {opacity: 1;}}
+@keyframes animated-left {0% {opacity: 0; transform: translateX(var(--animated-transform-value-negative));} 100% {opacity: 1; transform: translateX(0);}}
+@keyframes animated-right {0% {opacity: 0; transform: translateX(var(--animated-transform-value));} 100% {opacity: 1; transform: translateX(0);}}
+
+@keyframes animated-up {0% {opacity: 0; transform: translateY(var(--animated-transform-value-negative));} 100% {opacity: 1; transform: translateY(0);}}
+@keyframes animated-down {0% {opacity: 0; transform: translateY(var(--animated-transform-value));} 100% {opacity: 1; transform: translateY(0);}}
+@keyframes animated-zoom-in {0% {opacity: 0; transform: scale(0.5);} 100% {opacity: 1; transform: scale(1);}}
+@keyframes animated-zoom-out {0% {opacity: 0.5; transform: scale(1.5);} 100% {opacity: 1; transform: scale(1);}}
+

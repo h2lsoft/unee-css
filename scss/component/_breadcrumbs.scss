@@ -1,0 +1,77 @@
+.breadcrumbs
+{
+  margin: var(--breadcrumbs-margin);
+  padding: var(--breadcrumbs-padding);
+  background: var(--breadcrumbs-background);
+  border: var(--breadcrumbs-border);
+  border-radius: var(--breadcrumbs-border-radius);
+}
+
+.breadcrumbs ul {margin: 0;}
+.breadcrumbs li {display: inline;}
+
+.breadcrumbs li a
+{
+  display: inline-block;
+
+  margin: var(--breadcrumbs-link-margin);
+  padding: var(--breadcrumbs-link-padding);
+  font-family: var(--breadcrumbs-link-font-family), serif;
+  font-size: var(--breadcrumbs-link-font-size);
+  font-weight: var(--breadcrumbs-link-font-weight);
+  background: var(--breadcrumbs-link-background);
+  color: var(--breadcrumbs-link-color);
+}
+
+.breadcrumbs li a:hover
+{
+  color: var(--breadcrumbs-link-hover-color);
+  background: var(--breadcrumbs-link-hover-background);
+  font-weight: var(--breadcrumbs-link-hover-font-weight);
+}
+
+
+
+.breadcrumbs li a::before {
+  margin:  var(--breadcrumbs-link-prefix-margin);
+  padding: var(--breadcrumbs-link-prefix-padding);
+
+  font-family: var(--breadcrumbs-link-prefix-font-family), serif;
+  font-size: var(--breadcrumbs-link-prefix-font-size);
+  font-weight: var(--breadcrumbs-link-prefix-font-weight);
+  color: var(--breadcrumbs-link-prefix-color);
+  background: var(--breadcrumbs-link-prefix-background);
+  border: var(--breadcrumbs-link-prefix-border);
+  border-radius: var(--breadcrumbs-link-prefix-border-radius);
+
+  content: var(--breadcrumbs-link-prefix-content);
+}
+
+.breadcrumbs li:first-child a::before {
+  content: var(--breadcrumbs-link-prefix-first-child-content);
+}
+
+.breadcrumbs li a::after {
+  margin:  var(--breadcrumbs-link-suffix-margin);
+  padding: var(--breadcrumbs-link-suffix-padding);
+
+  font-family: var(--breadcrumbs-link-suffix-font-family), serif;
+  font-size: var(--breadcrumbs-link-suffix-font-size);
+  font-weight: var(--breadcrumbs-link-suffix-font-weight);
+  color: var(--breadcrumbs-link-suffix-color);
+  background: var(--breadcrumbs-link-suffix-background);
+  border: var(--breadcrumbs-link-suffix-border);
+  border-radius: var(--breadcrumbs-link-suffix-border-radius);
+
+  content: var(--breadcrumbs-link-suffix-content);
+}
+
+.breadcrumbs li:last-child a::after {
+  content: var(--breadcrumbs-link-suffix-last-child-content);
+}
+
+
+
+
+
+

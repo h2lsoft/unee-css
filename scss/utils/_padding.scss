@@ -1,0 +1,13 @@
+@for $i from 0 through 5 {
+
+  @include generate-classes("p-#{$i}", true){padding: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("py-#{$i}", true){padding-top: var(--unee-spacing-#{$i})!important; padding-bottom: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("px-#{$i}", true){padding-left: var(--unee-spacing-#{$i})!important; padding-right: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("pt-#{$i}", true){padding-top: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("pl-#{$i}", true){padding-left: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("ps-#{$i}", true){padding-left: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("pr-#{$i}", true){padding-right: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("pe-#{$i}", true){padding-right: var(--unee-spacing-#{$i})!important;}
+  @include generate-classes("pb-#{$i}", true){padding-bottom: var(--unee-spacing-#{$i})!important;}
+
+}

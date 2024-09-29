@@ -1,0 +1,9 @@
+@for $i from 0 through 10 {
+
+  $i: $i * 10;
+  $percent: $i * 0.01;
+
+  .opacity-#{$i} {opacity:#{$percent}!important;}
+
+
+}
