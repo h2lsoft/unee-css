@@ -4,10 +4,13 @@
     @include generate-classes('w-#{$size}', true) {width: auto !important;}
     @include generate-classes('h-#{$size}', true) {height: auto !important;}
 
+    @include generate-classes('w-max-none', true) {max-width: none!important;}
+    @include generate-classes('h-max-none', true) {max-height: none!important;}
+
   } @else {
 
-    @include generate-classes('w-#{$size}', true) {width: "#{$size}%" !important;}
-    @include generate-classes('h-#{$size}', true) {height: "#{$size}%" !important;}
+    @include generate-classes('w-#{$size}', true) {width: #{$size} + '%'!important;}
+    @include generate-classes('h-#{$size}', true) {height: #{$size} + '%'!important;}
 
   }
 }
@@ -16,9 +19,8 @@
 @for $i from 0 through 100 / 5 {
   $size: $i * 5;
 
-  @include generate-classes('w-#{$size}v', true) {width: "#{$size}vw" !important;}
-  @include generate-classes('h-#{$size}v', true) {height: "#{$size}vh" !important;}
-
+  @include generate-classes('w-#{$size}v', true) {width: #{$size}vw!important;}
+  @include generate-classes('h-#{$size}v', true) {height: #{$size}vh!important;}
 
 }
 
