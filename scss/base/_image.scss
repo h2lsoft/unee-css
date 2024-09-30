@@ -39,3 +39,26 @@ figure figcaption
   height: var(--img-avatar-small-width, 45px);
 }
 
+.img-thumbnail
+{
+  width: var(--img-thumbnail-width);
+  height: var(--img-thumbnail-height);
+  object-fit: var(--img-thumbnail-object-fit);
+  background: var(--img-thumbnail-background);
+}
+
+.img-medium
+{
+  width: var(--img-medium-width);
+  height: var(--img-medium-height);
+  object-fit: var(--img-medium-object-fit);
+  background: var(--img-medium-background);
+}
+
+.img-large
+{
+  width: var(--img-large-width);
+  height: var(--img-large-height);
+  object-fit: var(--img-large-object-fit);
+  background: var(--img-large-background);
+}

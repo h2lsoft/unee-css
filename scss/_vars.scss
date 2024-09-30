@@ -258,6 +258,21 @@
   --img-margin:0;
   --img-border-radius:0px;
 
+  --img-thumbnail-width:240px;
+  --img-thumbnail-height:135px;
+  --img-thumbnail-object-fit:cover;
+  --img-thumbnail-background:none;
+
+  --img-medium-width:320px;
+  --img-medium-height:180px;
+  --img-medium-object-fit:cover;
+  --img-medium-background:none;
+
+  --img-large-width:1024px;
+  --img-large-height:576px;
+  --img-large-object-fit:cover;
+  --img-large-background:none;
+
   --figure-margin: 20px 0;
   --figure-padding: 0;
   --figure-border: 0;
@@ -744,7 +759,7 @@
 
   /* component> list-image */
   --list-image-object-fit: contain;
-  --list-image-height: 100px;
+  --list-image-height: var(--img-thumbnail-size-width);
   --list-image-gap: var(--gap-2);
   --list-image-border: 1px solid var(--color-light);
   --list-image-transition: opacity 0.3s ease-in-out;
