@@ -643,7 +643,7 @@
 
   /* animated */
   --animated-duration: 0.7s;
-  --animated-delay: 0.5s;
+  --animated-delay: 1s;
   --animated-transform-value: 10px;
   --animated-transform-value-negative: calc(-1 * var(--animated-transform-value));
   --animated-timing-function: linear;
