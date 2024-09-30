@@ -8,6 +8,9 @@
   --container-max-width: 1440px;
   /* base */
   --font-family: Roboto, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-secondary: Roboto, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-ternary: Roboto, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospaced: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
   --font-size: 20px;
   --font-size-larger: 22px;
   --font-size-large: 24px;
@@ -264,6 +267,18 @@
   --img-padding:0;
   --img-margin:0;
   --img-border-radius:0px;
+  --img-thumbnail-width:240px;
+  --img-thumbnail-height:135px;
+  --img-thumbnail-object-fit:cover;
+  --img-thumbnail-background:none;
+  --img-medium-width:320px;
+  --img-medium-height:180px;
+  --img-medium-object-fit:cover;
+  --img-medium-background:none;
+  --img-large-width:1024px;
+  --img-large-height:576px;
+  --img-large-object-fit:cover;
+  --img-large-background:none;
   --figure-margin: 20px 0;
   --figure-padding: 0;
   --figure-border: 0;
@@ -424,7 +439,7 @@
   --button-font-size: var(--font-size);
   --button-font-weight: "normal";
   --button-height: 40px;
-  --button-border: 2px solid transparent;
+  --button-border: 1px solid transparent;
   --button-border-radius: 20px;
   --button-min-width: 120px;
   --button-padding: 0 20px;
@@ -569,11 +584,12 @@
   --navbar-mobile-opened-link-button-width:80%;
   /* animated */
   --animated-duration: 0.7s;
-  --animated-delay: 0.5s;
+  --animated-delay: 1s;
   --animated-transform-value: 10px;
   --animated-transform-value-negative: calc(-1 * var(--animated-transform-value));
   --animated-timing-function: linear;
   --animation-iteration-count: 1;
+  --animated-delay-cascade: 250ms;
   /* shadow */
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   --box-shadow-large: 0 1rem 3rem rgba(0, 0, 0, 0.175);
@@ -649,7 +665,8 @@
   --slideshow-min-height: 400px;
   --slideshow-max-height: auto;
   /* component> list-image */
-  --list-image-height: 100px;
+  --list-image-object-fit: contain;
+  --list-image-height: var(--img-thumbnail-size-width);
   --list-image-gap: var(--gap-2);
   --list-image-border: 1px solid var(--color-light);
   --list-image-transition: opacity 0.3s ease-in-out;
@@ -1211,6 +1228,27 @@ figure figcaption {
   height: var(--img-avatar-small-width, 45px);
 }
 
+.img-thumbnail {
+  width: var(--img-thumbnail-width);
+  height: var(--img-thumbnail-height);
+  object-fit: var(--img-thumbnail-object-fit);
+  background: var(--img-thumbnail-background);
+}
+
+.img-medium {
+  width: var(--img-medium-width);
+  height: var(--img-medium-height);
+  object-fit: var(--img-medium-object-fit);
+  background: var(--img-medium-background);
+}
+
+.img-large {
+  width: var(--img-large-width);
+  height: var(--img-large-height);
+  object-fit: var(--img-large-object-fit);
+  background: var(--img-large-background);
+}
+
 details {
   user-select: none;
   outline: none;
@@ -1248,6 +1286,12 @@ details summary + * {
   line-height: var(--details-summary-content-light-height);
   border: var(--details-summary-content-border);
   border-top: 0;
+}
+
+/** animation */
+details > summary {
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 table {
@@ -2385,7 +2429,7 @@ nav input[type=checkbox] {
 }
 
 .list-image img {
-  object-fit: contain;
+  object-fit: var(--list-image-object-fit);
   height: var(--list-image-height);
   transition: var(--list-image-transition);
   border: var(--list-image-border);
@@ -2625,8 +2669,16 @@ nav input[type=checkbox] {
   animation-delay: 0s;
 }
 
+.animated.delay-0_5s, .delay-0_5s .animated {
+  animation-delay: 0.5s;
+}
+
 .animated.delay-1s, .delay-1s .animated {
   animation-delay: 1s;
+}
+
+.animated.delay-1_5s, .delay-1_5s .animated {
+  animation-delay: 1.5s;
 }
 
 .animated.delay-2s, .delay-2s .animated {
@@ -2643,6 +2695,46 @@ nav input[type=checkbox] {
 
 .animated.delay-5s, .delay-5s .animated {
   animation-delay: 5s;
+}
+
+.delay-cascade .animated:nth-child(1) {
+  animation-delay: calc(var(--animated-delay-cascade) * 0);
+}
+
+.delay-cascade .animated:nth-child(2) {
+  animation-delay: calc(var(--animated-delay-cascade) * 1);
+}
+
+.delay-cascade .animated:nth-child(3) {
+  animation-delay: calc(var(--animated-delay-cascade) * 2);
+}
+
+.delay-cascade .animated:nth-child(4) {
+  animation-delay: calc(var(--animated-delay-cascade) * 3);
+}
+
+.delay-cascade .animated:nth-child(5) {
+  animation-delay: calc(var(--animated-delay-cascade) * 4);
+}
+
+.delay-cascade .animated:nth-child(6) {
+  animation-delay: calc(var(--animated-delay-cascade) * 5);
+}
+
+.delay-cascade .animated:nth-child(7) {
+  animation-delay: calc(var(--animated-delay-cascade) * 6);
+}
+
+.delay-cascade .animated:nth-child(8) {
+  animation-delay: calc(var(--animated-delay-cascade) * 7);
+}
+
+.delay-cascade .animated:nth-child(9) {
+  animation-delay: calc(var(--animated-delay-cascade) * 8);
+}
+
+.delay-cascade .animated:nth-child(10) {
+  animation-delay: calc(var(--animated-delay-cascade) * 9);
 }
 
 .animated-infinite .animated, .animated-infinite .animated {
@@ -5577,6 +5669,10 @@ nav input[type=checkbox] {
     flex: 0 0 calc(100% / 12) !important;
   }
 }
+.vertical-align-middle {
+  align-items: center;
+}
+
 .row.no-padding > *, .row.cols-no-padding > * {
   padding: 0 !important;
 }
@@ -7568,760 +7664,788 @@ nav input[type=checkbox] {
     height: auto !important;
   }
 }
+.w-max-none {
+  max-width: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-w-max-none {
+    max-width: none !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .tablet-w-max-none {
+    max-width: none !important;
+  }
+}
+.h-max-none {
+  max-height: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-h-max-none {
+    max-height: none !important;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .tablet-h-max-none {
+    max-height: none !important;
+  }
+}
 .w-100 {
-  width: "100%" !important;
+  width: 100% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-100 {
-    width: "100%" !important;
+    width: 100% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-100 {
-    width: "100%" !important;
+    width: 100% !important;
   }
 }
 .h-100 {
-  height: "100%" !important;
+  height: 100% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-100 {
-    height: "100%" !important;
+    height: 100% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-100 {
-    height: "100%" !important;
+    height: 100% !important;
   }
 }
 .w-75 {
-  width: "75%" !important;
+  width: 75% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-75 {
-    width: "75%" !important;
+    width: 75% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-75 {
-    width: "75%" !important;
+    width: 75% !important;
   }
 }
 .h-75 {
-  height: "75%" !important;
+  height: 75% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-75 {
-    height: "75%" !important;
+    height: 75% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-75 {
-    height: "75%" !important;
+    height: 75% !important;
   }
 }
 .w-50 {
-  width: "50%" !important;
+  width: 50% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-50 {
-    width: "50%" !important;
+    width: 50% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-50 {
-    width: "50%" !important;
+    width: 50% !important;
   }
 }
 .h-50 {
-  height: "50%" !important;
+  height: 50% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-50 {
-    height: "50%" !important;
+    height: 50% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-50 {
-    height: "50%" !important;
+    height: 50% !important;
   }
 }
 .w-33 {
-  width: "33%" !important;
+  width: 33% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-33 {
-    width: "33%" !important;
+    width: 33% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-33 {
-    width: "33%" !important;
+    width: 33% !important;
   }
 }
 .h-33 {
-  height: "33%" !important;
+  height: 33% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-33 {
-    height: "33%" !important;
+    height: 33% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-33 {
-    height: "33%" !important;
+    height: 33% !important;
   }
 }
 .w-25 {
-  width: "25%" !important;
+  width: 25% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-25 {
-    width: "25%" !important;
+    width: 25% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-25 {
-    width: "25%" !important;
+    width: 25% !important;
   }
 }
 .h-25 {
-  height: "25%" !important;
+  height: 25% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-25 {
-    height: "25%" !important;
+    height: 25% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-25 {
-    height: "25%" !important;
+    height: 25% !important;
   }
 }
 .w-0 {
-  width: "0%" !important;
+  width: 0% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-0 {
-    width: "0%" !important;
+    width: 0% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-0 {
-    width: "0%" !important;
+    width: 0% !important;
   }
 }
 .h-0 {
-  height: "0%" !important;
+  height: 0% !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-0 {
-    height: "0%" !important;
+    height: 0% !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-0 {
-    height: "0%" !important;
+    height: 0% !important;
   }
 }
 .w-0v {
-  width: "0vw" !important;
+  width: 0vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-0v {
-    width: "0vw" !important;
+    width: 0vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-0v {
-    width: "0vw" !important;
+    width: 0vw !important;
   }
 }
 .h-0v {
-  height: "0vh" !important;
+  height: 0vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-0v {
-    height: "0vh" !important;
+    height: 0vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-0v {
-    height: "0vh" !important;
+    height: 0vh !important;
   }
 }
 .w-5v {
-  width: "5vw" !important;
+  width: 5vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-5v {
-    width: "5vw" !important;
+    width: 5vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-5v {
-    width: "5vw" !important;
+    width: 5vw !important;
   }
 }
 .h-5v {
-  height: "5vh" !important;
+  height: 5vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-5v {
-    height: "5vh" !important;
+    height: 5vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-5v {
-    height: "5vh" !important;
+    height: 5vh !important;
   }
 }
 .w-10v {
-  width: "10vw" !important;
+  width: 10vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-10v {
-    width: "10vw" !important;
+    width: 10vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-10v {
-    width: "10vw" !important;
+    width: 10vw !important;
   }
 }
 .h-10v {
-  height: "10vh" !important;
+  height: 10vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-10v {
-    height: "10vh" !important;
+    height: 10vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-10v {
-    height: "10vh" !important;
+    height: 10vh !important;
   }
 }
 .w-15v {
-  width: "15vw" !important;
+  width: 15vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-15v {
-    width: "15vw" !important;
+    width: 15vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-15v {
-    width: "15vw" !important;
+    width: 15vw !important;
   }
 }
 .h-15v {
-  height: "15vh" !important;
+  height: 15vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-15v {
-    height: "15vh" !important;
+    height: 15vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-15v {
-    height: "15vh" !important;
+    height: 15vh !important;
   }
 }
 .w-20v {
-  width: "20vw" !important;
+  width: 20vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-20v {
-    width: "20vw" !important;
+    width: 20vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-20v {
-    width: "20vw" !important;
+    width: 20vw !important;
   }
 }
 .h-20v {
-  height: "20vh" !important;
+  height: 20vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-20v {
-    height: "20vh" !important;
+    height: 20vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-20v {
-    height: "20vh" !important;
+    height: 20vh !important;
   }
 }
 .w-25v {
-  width: "25vw" !important;
+  width: 25vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-25v {
-    width: "25vw" !important;
+    width: 25vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-25v {
-    width: "25vw" !important;
+    width: 25vw !important;
   }
 }
 .h-25v {
-  height: "25vh" !important;
+  height: 25vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-25v {
-    height: "25vh" !important;
+    height: 25vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-25v {
-    height: "25vh" !important;
+    height: 25vh !important;
   }
 }
 .w-30v {
-  width: "30vw" !important;
+  width: 30vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-30v {
-    width: "30vw" !important;
+    width: 30vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-30v {
-    width: "30vw" !important;
+    width: 30vw !important;
   }
 }
 .h-30v {
-  height: "30vh" !important;
+  height: 30vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-30v {
-    height: "30vh" !important;
+    height: 30vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-30v {
-    height: "30vh" !important;
+    height: 30vh !important;
   }
 }
 .w-35v {
-  width: "35vw" !important;
+  width: 35vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-35v {
-    width: "35vw" !important;
+    width: 35vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-35v {
-    width: "35vw" !important;
+    width: 35vw !important;
   }
 }
 .h-35v {
-  height: "35vh" !important;
+  height: 35vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-35v {
-    height: "35vh" !important;
+    height: 35vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-35v {
-    height: "35vh" !important;
+    height: 35vh !important;
   }
 }
 .w-40v {
-  width: "40vw" !important;
+  width: 40vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-40v {
-    width: "40vw" !important;
+    width: 40vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-40v {
-    width: "40vw" !important;
+    width: 40vw !important;
   }
 }
 .h-40v {
-  height: "40vh" !important;
+  height: 40vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-40v {
-    height: "40vh" !important;
+    height: 40vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-40v {
-    height: "40vh" !important;
+    height: 40vh !important;
   }
 }
 .w-45v {
-  width: "45vw" !important;
+  width: 45vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-45v {
-    width: "45vw" !important;
+    width: 45vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-45v {
-    width: "45vw" !important;
+    width: 45vw !important;
   }
 }
 .h-45v {
-  height: "45vh" !important;
+  height: 45vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-45v {
-    height: "45vh" !important;
+    height: 45vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-45v {
-    height: "45vh" !important;
+    height: 45vh !important;
   }
 }
 .w-50v {
-  width: "50vw" !important;
+  width: 50vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-50v {
-    width: "50vw" !important;
+    width: 50vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-50v {
-    width: "50vw" !important;
+    width: 50vw !important;
   }
 }
 .h-50v {
-  height: "50vh" !important;
+  height: 50vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-50v {
-    height: "50vh" !important;
+    height: 50vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-50v {
-    height: "50vh" !important;
+    height: 50vh !important;
   }
 }
 .w-55v {
-  width: "55vw" !important;
+  width: 55vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-55v {
-    width: "55vw" !important;
+    width: 55vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-55v {
-    width: "55vw" !important;
+    width: 55vw !important;
   }
 }
 .h-55v {
-  height: "55vh" !important;
+  height: 55vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-55v {
-    height: "55vh" !important;
+    height: 55vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-55v {
-    height: "55vh" !important;
+    height: 55vh !important;
   }
 }
 .w-60v {
-  width: "60vw" !important;
+  width: 60vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-60v {
-    width: "60vw" !important;
+    width: 60vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-60v {
-    width: "60vw" !important;
+    width: 60vw !important;
   }
 }
 .h-60v {
-  height: "60vh" !important;
+  height: 60vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-60v {
-    height: "60vh" !important;
+    height: 60vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-60v {
-    height: "60vh" !important;
+    height: 60vh !important;
   }
 }
 .w-65v {
-  width: "65vw" !important;
+  width: 65vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-65v {
-    width: "65vw" !important;
+    width: 65vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-65v {
-    width: "65vw" !important;
+    width: 65vw !important;
   }
 }
 .h-65v {
-  height: "65vh" !important;
+  height: 65vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-65v {
-    height: "65vh" !important;
+    height: 65vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-65v {
-    height: "65vh" !important;
+    height: 65vh !important;
   }
 }
 .w-70v {
-  width: "70vw" !important;
+  width: 70vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-70v {
-    width: "70vw" !important;
+    width: 70vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-70v {
-    width: "70vw" !important;
+    width: 70vw !important;
   }
 }
 .h-70v {
-  height: "70vh" !important;
+  height: 70vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-70v {
-    height: "70vh" !important;
+    height: 70vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-70v {
-    height: "70vh" !important;
+    height: 70vh !important;
   }
 }
 .w-75v {
-  width: "75vw" !important;
+  width: 75vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-75v {
-    width: "75vw" !important;
+    width: 75vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-75v {
-    width: "75vw" !important;
+    width: 75vw !important;
   }
 }
 .h-75v {
-  height: "75vh" !important;
+  height: 75vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-75v {
-    height: "75vh" !important;
+    height: 75vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-75v {
-    height: "75vh" !important;
+    height: 75vh !important;
   }
 }
 .w-80v {
-  width: "80vw" !important;
+  width: 80vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-80v {
-    width: "80vw" !important;
+    width: 80vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-80v {
-    width: "80vw" !important;
+    width: 80vw !important;
   }
 }
 .h-80v {
-  height: "80vh" !important;
+  height: 80vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-80v {
-    height: "80vh" !important;
+    height: 80vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-80v {
-    height: "80vh" !important;
+    height: 80vh !important;
   }
 }
 .w-85v {
-  width: "85vw" !important;
+  width: 85vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-85v {
-    width: "85vw" !important;
+    width: 85vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-85v {
-    width: "85vw" !important;
+    width: 85vw !important;
   }
 }
 .h-85v {
-  height: "85vh" !important;
+  height: 85vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-85v {
-    height: "85vh" !important;
+    height: 85vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-85v {
-    height: "85vh" !important;
+    height: 85vh !important;
   }
 }
 .w-90v {
-  width: "90vw" !important;
+  width: 90vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-90v {
-    width: "90vw" !important;
+    width: 90vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-90v {
-    width: "90vw" !important;
+    width: 90vw !important;
   }
 }
 .h-90v {
-  height: "90vh" !important;
+  height: 90vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-90v {
-    height: "90vh" !important;
+    height: 90vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-90v {
-    height: "90vh" !important;
+    height: 90vh !important;
   }
 }
 .w-95v {
-  width: "95vw" !important;
+  width: 95vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-95v {
-    width: "95vw" !important;
+    width: 95vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-95v {
-    width: "95vw" !important;
+    width: 95vw !important;
   }
 }
 .h-95v {
-  height: "95vh" !important;
+  height: 95vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-95v {
-    height: "95vh" !important;
+    height: 95vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-95v {
-    height: "95vh" !important;
+    height: 95vh !important;
   }
 }
 .w-100v {
-  width: "100vw" !important;
+  width: 100vw !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-w-100v {
-    width: "100vw" !important;
+    width: 100vw !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-w-100v {
-    width: "100vw" !important;
+    width: 100vw !important;
   }
 }
 .h-100v {
-  height: "100vh" !important;
+  height: 100vh !important;
 }
 
 @media only screen and (max-width: 767px) {
   .mobile-h-100v {
-    height: "100vh" !important;
+    height: 100vh !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .tablet-h-100v {
-    height: "100vh" !important;
+    height: 100vh !important;
   }
 }
 .d-none {
