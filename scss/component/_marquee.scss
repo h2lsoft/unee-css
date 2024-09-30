@@ -1,41 +1,40 @@
 .marquee {
   width: 100%;
   overflow:hidden;
-  white-space: nowrap;
-
   margin: var(--marquee-margin);
   padding: var(--marquee-padding);
-  text-align: left;
+  white-space: nowrap;
+}
+
+.marquee main {
+
+  width: 100%;
+  white-space: nowrap;
+  animation: marquee__scroll var(--marquee-animation-duration) linear infinite;
 
 }
+
 
 /* marquee> ul */
 .marquee main ul
 {
+    display: inline-block;
     margin: 0;
     padding: 0 0 0 100%;
-    display: inline-block;
+
 }
 
 .marquee main li
 {
+  display: inline-block;
   margin: var(--marquee-li-margin);
   padding: var(--marquee-li-padding);
-  display: inline-block;
-}
 
-/* marquee> row */
-.marquee .box {
-  flex: 0 0 auto;
 }
 
 
 
 /* animation */
-.marquee main  {
-  animation: marquee__scroll var(--marquee-animation-duration) linear infinite;
-}
-
 .marquee-hover-paused:hover main {
   animation-play-state: paused;
 }

@@ -642,7 +642,7 @@
 
   /* animated */
   --animated-duration: 0.7s;
-  --animated-delay: 1s;
+  --animated-delay: 0.5s;
   --animated-transform-value: 10px;
   --animated-transform-value-negative: calc(-1 * var(--animated-transform-value));
   --animated-timing-function: linear;
@@ -767,7 +767,7 @@
 
   --marquee-animation-duration: 0s;
   --marquee-animation-position-start:100%;
-  --marquee-animation-position-end:-180%;
+  --marquee-animation-position-end:-120%;
 
 
 

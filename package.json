@@ -4,7 +4,7 @@
   "description": "A lightweight and customizable CSS framework",
   "main": "dist/unee.css",
   "scripts": {
-    "build": "sass scss/unee.scss dist/unee.css && sass scss/unee.scss --style compressed dist/unee.min.css"
+    "build": "sass scss/unee.scss dist/unee.css && sass scss/unee.scss docs/assets/css/unee.css && sass scss/unee.scss --style compressed dist/unee.min.css"
   },
   "keywords": [
     "css",

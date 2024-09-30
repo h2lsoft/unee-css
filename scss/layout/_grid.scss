@@ -61,16 +61,23 @@
 .row.center {place-items: center; text-align: center}
 
 // nowrap
-.row.no-wrap {white-space: nowrap; display: flex; overflow:hidden; overflow-x:auto;}
-.row.no-wrap > * {flex: 0 0 auto;}
+.row.no-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.row.no-wrap > * {
+  flex: 0 0 100%;
+}
 
 @for $i from 1 through 12 {
-  .row.no-wrap.row-cols-#{$i}> * {width: calc(100% / #{$i});}
-  @include generate-classes('row.no-wrap.row-cols-#{$i} > *') {
-	width: calc(100% / #{$i})!important;
+  @include generate-classes('row-cols-#{$i}.no-wrap > *', true) {
+	flex: 0 0 calc(100% / #{$i})!important;
   }
-
 }
+
+
 
 
 

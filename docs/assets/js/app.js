@@ -59,7 +59,7 @@ $(function() {
 			patterns = patterns.split(',');
 
 
-			const file = 'https://cdn.jsdelivr.net/gh/h2lsoft/unee-css/dist/unee.css';
+			const file = 'assets/css/unee.css';
 			contents = $.get(file, function(contents){
 
 				let rootBlocks = contents.match(/:root\s*{([^}]*)}/g);
