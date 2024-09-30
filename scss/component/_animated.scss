@@ -26,11 +26,28 @@
 
 
 .animated.delay-0s, .delay-0s .animated {animation-delay: 0s;}
+.animated.delay-0_5s, .delay-0_5s .animated {animation-delay: 0.5s;}
 .animated.delay-1s, .delay-1s .animated {animation-delay: 1s;}
+.animated.delay-1_5s, .delay-1_5s .animated {animation-delay: 1.5s;}
 .animated.delay-2s, .delay-2s .animated {animation-delay: 2s;}
 .animated.delay-3s, .delay-3s .animated {animation-delay: 3s;}
 .animated.delay-4s, .delay-4s .animated {animation-delay: 4s;}
 .animated.delay-5s, .delay-5s .animated {animation-delay: 5s;}
+
+.delay-cascade {}
+.delay-cascade .animated:nth-child(1) {animation-delay: calc(var(--animated-delay-cascade) * 0);}
+.delay-cascade .animated:nth-child(2) {animation-delay: calc(var(--animated-delay-cascade) * 1);}
+.delay-cascade .animated:nth-child(3) {animation-delay: calc(var(--animated-delay-cascade) * 2);}
+.delay-cascade .animated:nth-child(4) {animation-delay: calc(var(--animated-delay-cascade) * 3);}
+.delay-cascade .animated:nth-child(5) {animation-delay: calc(var(--animated-delay-cascade) * 4);}
+.delay-cascade .animated:nth-child(6) {animation-delay: calc(var(--animated-delay-cascade) * 5);}
+.delay-cascade .animated:nth-child(7) {animation-delay: calc(var(--animated-delay-cascade) * 6);}
+.delay-cascade .animated:nth-child(8) {animation-delay: calc(var(--animated-delay-cascade) * 7);}
+.delay-cascade .animated:nth-child(9) {animation-delay: calc(var(--animated-delay-cascade) * 8);}
+.delay-cascade .animated:nth-child(10) {animation-delay: calc(var(--animated-delay-cascade) * 9);}
+
+
+
 
 .animated-infinite .animated, .animated-infinite .animated {animation-iteration-count:infinite;}
 

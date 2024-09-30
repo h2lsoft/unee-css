@@ -63,7 +63,6 @@
     <div class="container">
 
         <div class="row">
-
             <div class="offset-col-2 col-8 text-center">
                 <hgroup>
                     <h1 class="animated animated-zoom">This is my title</h1>
@@ -78,6 +77,26 @@
         </div>
     </div>
 </section>
+
+<h4 class="mb-1 text-center">Animated in cascade .delay-cascade</h4>
+
+<section class="mt-0 section-overlay-white p-0 text-center">
+    <div class="container">
+        <div class="row row-cols-3 px-1 py-0 delay-cascade">
+            <div class="col bg-light animated animated-left">1</div>
+            <div class="col bg-light animated animated-left">2</div>
+            <div class="col bg-light animated animated-left">3</div>
+            <div class="col bg-light animated animated-left">4</div>
+            <div class="col bg-light animated animated-left">5</div>
+            <div class="col bg-light animated animated-left">6</div>
+            <div class="col bg-light animated animated-left">7</div>
+            <div class="col bg-light animated animated-left">8</div>
+            <div class="col bg-light animated animated-left">9</div>
+        </div>
+
+    </div>
+</section>
+
 
 <code class="html">
 <div class="animated animated-left">
@@ -106,11 +125,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <p class="text-muted text-smaller">You can put on element directly or on parent element to apply to all children</p>
         <dl>
+
+            <dt>.delay-cascade</dt>
+            <dd>add delay in cascade</dd>
+
             <dt>.delay-0s</dt>
             <dd>remove delay</dd>
 
+            <dt>.delay-0_5s</dt>
+            <dd>add delay .5s</dd>
+
             <dt>.delay-1s</dt>
             <dd>add delay 1s</dd>
+
+            <dt>.delay-1_5s</dt>
+            <dd>add delay 1.5s</dd>
 
             <dt>.delay-2s</dt>
             <dd>add delay 2s</dd>

@@ -663,6 +663,7 @@
   --animated-transform-value-negative: calc(-1 * var(--animated-transform-value));
   --animated-timing-function: linear;
   --animation-iteration-count: 1;
+  --animated-delay-cascade: 250ms;
 
   /* shadow */
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
