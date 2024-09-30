@@ -18,7 +18,7 @@
 
 .list-image img {
 
-  object-fit: contain;
+  object-fit: var(--list-image-object-fit);
   height: var(--list-image-height);
   transition: var(--list-image-transition);
   border: var(--list-image-border);
