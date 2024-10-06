@@ -78,14 +78,18 @@ nav ul li a {
   background: var(--navbar-menu-link-background);
   border: 0;
   border-radius: 0;
-
-
 }
 
 nav ul li a:hover {
   background: var(--navbar-menu-link-hover-background);
   color: var(--navbar-menu-link-hover-color);
 }
+
+nav ul li.active a {
+  background: var(--navbar-menu-link-active-background);
+  color: var(--navbar-menu-link-active-color);
+}
+
 
 nav ul .button {
   height: auto;

@@ -613,7 +613,10 @@
   --navbar-menu-link-text-transform: none;
 
   --navbar-menu-link-hover-background:none;
-  --navbar-menu-link-hover-color:var(--link-dark);
+  --navbar-menu-link-hover-color:var(--color-dark);
+
+  --navbar-menu-link-active-background:none;
+  --navbar-menu-link-active-color:var(--color-black);
 
   --navbar-menu-link-buton-padding:8px 12px;
 
