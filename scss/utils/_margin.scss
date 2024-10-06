@@ -10,6 +10,15 @@
   @include generate-classes("me-#{$i}", true){margin-right: var(--unee-spacing-#{$i})!important;}
   @include generate-classes("mb-#{$i}", true){margin-bottom: var(--unee-spacing-#{$i})!important;}
 
+  // margin negative
+  @include generate-classes("m-n-#{$i}", true){margin: calc(-1 * var(--unee-spacing-#{$i}))!important;}
+  @include generate-classes("mt-n-#{$i}", true){margin-top: calc(-1 * var(--unee-spacing-#{$i}))!important;}
+  @include generate-classes("ml-n-#{$i}", true){margin-left: calc(-1 * var(--unee-spacing-#{$i}))!important;}
+  @include generate-classes("ms-n-#{$i}", true){margin-left: calc(-1 * var(--unee-spacing-#{$i}))!important;}
+  @include generate-classes("mr-n-#{$i}", true){margin-right: calc(-1 * var(--unee-spacing-#{$i}))!important;}
+  @include generate-classes("me-n-#{$i}", true){margin-right: calc(-1 * var(--unee-spacing-#{$i}))!important;}
+  @include generate-classes("mb-n-#{$i}", true){margin-bottom: calc(-1 * var(--unee-spacing-#{$i}))!important;}
+
 }
 
 
