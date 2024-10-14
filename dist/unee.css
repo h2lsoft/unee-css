@@ -2246,7 +2246,7 @@ nav input[type=checkbox] {
     overflow-y: scroll !important;
     display: block;
     transition: var(--navbar-mobile-opened-transition);
-    left: -110vw;
+    left: -110%;
     opacity: 1;
   }
   nav input[type=checkbox]:checked + ul {

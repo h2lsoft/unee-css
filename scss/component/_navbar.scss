@@ -175,7 +175,7 @@ nav input[type=checkbox] {display:none;}
 
     display: block;
     transition:  var(--navbar-mobile-opened-transition);
-    left: -110vw;
+    left: -110%;
     opacity: 1;
 
   }
