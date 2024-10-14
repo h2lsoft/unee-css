@@ -547,7 +547,9 @@
   --navbar-menu-link-color: var(--link-color);
   --navbar-menu-link-text-transform: none;
   --navbar-menu-link-hover-background:none;
-  --navbar-menu-link-hover-color:var(--link-dark);
+  --navbar-menu-link-hover-color:var(--color-dark);
+  --navbar-menu-link-active-background:none;
+  --navbar-menu-link-active-color:var(--color-black);
   --navbar-menu-link-buton-padding:8px 12px;
   --navbar-mobile-height:80px;
   --navbar-mobile-brand-width:180px;
@@ -2166,6 +2168,11 @@ nav ul li a {
 nav ul li a:hover {
   background: var(--navbar-menu-link-hover-background);
   color: var(--navbar-menu-link-hover-color);
+}
+
+nav ul li.active a {
+  background: var(--navbar-menu-link-active-background);
+  color: var(--navbar-menu-link-active-color);
 }
 
 nav ul .button {
@@ -5501,171 +5508,171 @@ nav input[type=checkbox] {
   flex: 0 0 100%;
 }
 
-.row-cols-1.no-wrap > * {
+.row.row-cols-1.no-wrap > * {
   flex: 0 0 calc(100% / 1) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-1.no-wrap > * {
+  .mobile-row.row-cols-1.no-wrap > * {
     flex: 0 0 calc(100% / 1) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-1.no-wrap > * {
+  .tablet-row.row-cols-1.no-wrap > * {
     flex: 0 0 calc(100% / 1) !important;
   }
 }
-.row-cols-2.no-wrap > * {
+.row.row-cols-2.no-wrap > * {
   flex: 0 0 calc(100% / 2) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-2.no-wrap > * {
+  .mobile-row.row-cols-2.no-wrap > * {
     flex: 0 0 calc(100% / 2) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-2.no-wrap > * {
+  .tablet-row.row-cols-2.no-wrap > * {
     flex: 0 0 calc(100% / 2) !important;
   }
 }
-.row-cols-3.no-wrap > * {
+.row.row-cols-3.no-wrap > * {
   flex: 0 0 calc(100% / 3) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-3.no-wrap > * {
+  .mobile-row.row-cols-3.no-wrap > * {
     flex: 0 0 calc(100% / 3) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-3.no-wrap > * {
+  .tablet-row.row-cols-3.no-wrap > * {
     flex: 0 0 calc(100% / 3) !important;
   }
 }
-.row-cols-4.no-wrap > * {
+.row.row-cols-4.no-wrap > * {
   flex: 0 0 calc(100% / 4) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-4.no-wrap > * {
+  .mobile-row.row-cols-4.no-wrap > * {
     flex: 0 0 calc(100% / 4) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-4.no-wrap > * {
+  .tablet-row.row-cols-4.no-wrap > * {
     flex: 0 0 calc(100% / 4) !important;
   }
 }
-.row-cols-5.no-wrap > * {
+.row.row-cols-5.no-wrap > * {
   flex: 0 0 calc(100% / 5) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-5.no-wrap > * {
+  .mobile-row.row-cols-5.no-wrap > * {
     flex: 0 0 calc(100% / 5) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-5.no-wrap > * {
+  .tablet-row.row-cols-5.no-wrap > * {
     flex: 0 0 calc(100% / 5) !important;
   }
 }
-.row-cols-6.no-wrap > * {
+.row.row-cols-6.no-wrap > * {
   flex: 0 0 calc(100% / 6) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-6.no-wrap > * {
+  .mobile-row.row-cols-6.no-wrap > * {
     flex: 0 0 calc(100% / 6) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-6.no-wrap > * {
+  .tablet-row.row-cols-6.no-wrap > * {
     flex: 0 0 calc(100% / 6) !important;
   }
 }
-.row-cols-7.no-wrap > * {
+.row.row-cols-7.no-wrap > * {
   flex: 0 0 calc(100% / 7) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-7.no-wrap > * {
+  .mobile-row.row-cols-7.no-wrap > * {
     flex: 0 0 calc(100% / 7) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-7.no-wrap > * {
+  .tablet-row.row-cols-7.no-wrap > * {
     flex: 0 0 calc(100% / 7) !important;
   }
 }
-.row-cols-8.no-wrap > * {
+.row.row-cols-8.no-wrap > * {
   flex: 0 0 calc(100% / 8) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-8.no-wrap > * {
+  .mobile-row.row-cols-8.no-wrap > * {
     flex: 0 0 calc(100% / 8) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-8.no-wrap > * {
+  .tablet-row.row-cols-8.no-wrap > * {
     flex: 0 0 calc(100% / 8) !important;
   }
 }
-.row-cols-9.no-wrap > * {
+.row.row-cols-9.no-wrap > * {
   flex: 0 0 calc(100% / 9) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-9.no-wrap > * {
+  .mobile-row.row-cols-9.no-wrap > * {
     flex: 0 0 calc(100% / 9) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-9.no-wrap > * {
+  .tablet-row.row-cols-9.no-wrap > * {
     flex: 0 0 calc(100% / 9) !important;
   }
 }
-.row-cols-10.no-wrap > * {
+.row.row-cols-10.no-wrap > * {
   flex: 0 0 calc(100% / 10) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-10.no-wrap > * {
+  .mobile-row.row-cols-10.no-wrap > * {
     flex: 0 0 calc(100% / 10) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-10.no-wrap > * {
+  .tablet-row.row-cols-10.no-wrap > * {
     flex: 0 0 calc(100% / 10) !important;
   }
 }
-.row-cols-11.no-wrap > * {
+.row.row-cols-11.no-wrap > * {
   flex: 0 0 calc(100% / 11) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-11.no-wrap > * {
+  .mobile-row.row-cols-11.no-wrap > * {
     flex: 0 0 calc(100% / 11) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-11.no-wrap > * {
+  .tablet-row.row-cols-11.no-wrap > * {
     flex: 0 0 calc(100% / 11) !important;
   }
 }
-.row-cols-12.no-wrap > * {
+.row.row-cols-12.no-wrap > * {
   flex: 0 0 calc(100% / 12) !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-row-cols-12.no-wrap > * {
+  .mobile-row.row-cols-12.no-wrap > * {
     flex: 0 0 calc(100% / 12) !important;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .tablet-row-cols-12.no-wrap > * {
+  .tablet-row.row-cols-12.no-wrap > * {
     flex: 0 0 calc(100% / 12) !important;
   }
 }

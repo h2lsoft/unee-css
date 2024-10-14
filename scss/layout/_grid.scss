@@ -72,7 +72,7 @@
 }
 
 @for $i from 1 through 12 {
-  @include generate-classes('row-cols-#{$i}.no-wrap > *', true) {
+  @include generate-classes('row.row-cols-#{$i}.no-wrap > *', true) {
 	flex: 0 0 calc(100% / #{$i})!important;
   }
 }
