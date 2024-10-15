@@ -4,13 +4,20 @@
   "description": "A lightweight and customizable CSS framework",
   "main": "dist/unee.css",
   "scripts": {
-    "build": "sass scss/unee.scss dist/unee.css && sass scss/unee.scss docs/assets/css/unee.css && postcss dist/unee.css -o dist/unee.min.css"
+    "scss-css-normal": "sass scss/unee.scss dist/unee.css",
+    "post-css-normal": "postcss dist/unee.css -o dist/unee.css",
+    "copy-doc": "postcss dist/unee.css -o docs/assets/css/unee.css",
+    "css-compress": "sass --style=compressed dist/unee.css dist/unee.min.css",
+    "build": "npm run scss-css-normal && npm run post-css-normal && npm run copy-doc && npm run css-compress"
   },
   "keywords": [
     "css",
     "framework",
+    "postfix",
     "scss",
-    "responsive"
+    "responsive",
+    "bootstrap",
+    "tailwind"
   ],
   "author": "H2lsoft <contact@h2lsoft.com>",
   "license": "MIT",

@@ -3,9 +3,6 @@ module.exports = {
 		require('postcss-sort-media-queries')({
 			sort: 'desktop-first',
 		}),
-		require('autoprefixer'),
-		require('cssnano')({
-			preset: 'default',
-		}),
+		require('autoprefixer')
 	]
 }
