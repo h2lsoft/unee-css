@@ -11,8 +11,9 @@
 </p>
 
 <p align="center"> 
-     [![Latest release](https://img.shields.io/github/release/h2lsoft/unee-css)](https://github.com/h2lsoft/unee-css/releases/latest)
-     [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+    <img src="https://img.shields.io/github/release/h2lsoft/unee-css" alt="Latest release">
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="Licence"></a>
 </p>
 
 
