@@ -10,8 +10,7 @@
   CSS framework for rapidly building frontend.
 </p>
 
-<p align="center"> 
-
+<p align="center">
     <img src="https://img.shields.io/github/release/h2lsoft/unee-css" alt="Latest release">
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="Licence"></a>
 </p>
