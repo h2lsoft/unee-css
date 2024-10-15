@@ -17,8 +17,8 @@
 
 
 # Unee Css
-Unee CSS is a minimalist and lightweight CSS framework designed for developers who want clean, modern, and fast-loading websites. 
-It provides only the essential styles, ensuring a quick start with minimal customization. 
+Unee CSS is a minimalist and lightweight CSS framework designed for developers who want clean, modern, and fast-loading websites.
+It includes a range of pre-defined styles for common elements such as buttons, forms, and navigation menus, as well as a flexible grid system for creating responsive layouts. The framework is also highly customizable, allowing developers to easily modify the default styles to suit their specific needs.
 
 
 
