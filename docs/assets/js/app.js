@@ -25,6 +25,11 @@ $(function() {
 
 		$('.page').html('loading...').load('page/' + page, function () {
 
+			let cur_page_content = $('.page').html();
+			let responsive_content = "<div class='px-1 mb-1 text-small rounded bg-warning-10'><i class='bi bi-info-circle-fill'></i> This class supports prefix <em>`.mobile-*`</em> and <em>`.tablet-*`</em>  to force responsive</div>";
+			cur_page_content = cur_page_content.replaceAll('[RESPONSIVE_SUPPORT_BANNER]', responsive_content);
+			$('.page').html(cur_page_content);
+
 			uneeAnimatedObserve();
 			POPSTATE_IGNORE = false;
 
@@ -49,7 +54,7 @@ $(function() {
 			$('.css-variables').html('loading variables...');
 
 			$('.css-variables').hide();
-			if(!$(this).find('.css-variables').length)
+			if (!$(this).find('.css-variables').length)
 				return;
 
 
@@ -60,24 +65,26 @@ $(function() {
 
 
 			const file = 'assets/css/unee.css';
-			contents = $.get(file, function(contents){
+			contents = $.get(file, function (contents) {
 
 				let rootBlocks = contents.match(/:root\s*{([^}]*)}/g);
 
 				var variables = [];
-				rootBlocks.forEach(function(block) {
+				rootBlocks.forEach(function (block) {
 
 					var innerContent = block.match(/{([^}]*)}/)[1];
 
 					var lines = innerContent.split('\n')
-						.map(function(line) { return line.trim(); })
-						.filter(function(line) {
+						.map(function (line) {
+							return line.trim();
+						})
+						.filter(function (line) {
 							return line.length > 0 && !line.startsWith('/*');
 						});
 
 					variables = variables.concat(lines);
 
-					variables.sort(function(a, b) {
+					variables.sort(function (a, b) {
 						return a.localeCompare(b, undefined, {sensitivity: 'base'});
 					});
 
@@ -86,25 +93,24 @@ $(function() {
 
 					// pattern
 					var pattern_last = '';
-					patterns.forEach(function(pattern) {
+					patterns.forEach(function (pattern) {
 						pattern = pattern.trim();
-						variables.forEach(function(line) {
+						variables.forEach(function (line) {
 
 							const p = line.split(':');
 							let name = p[0].toString().trim();
 							let val = p[1].toString().trim();
 							val = val.replace(';', '');
 
-							if(line.startsWith('--'+pattern+'-')) {
+							if (line.startsWith('--' + pattern + '-')) {
 
-								if(pattern_last !== pattern)
-								{
+								if (pattern_last !== pattern) {
 									pattern_last = pattern;
 									variables_html += "<br>";
 								}
 
-								variables_html += "<b>"+name+":</b> ";
-								variables_html += "<span>"+val+";</span>";
+								variables_html += "<b>" + name + ":</b> ";
+								variables_html += "<span>" + val + ";</span>";
 								variables_html += "<br>";
 							}
 
@@ -117,9 +123,7 @@ $(function() {
 				});
 
 
-
 			});
-
 
 
 		});
