@@ -1,7 +1,21 @@
-/*$breakpoints: (
+$breakpoints: (
 		mobile: 768px,
 		tablet: 1024px
-);*/
+);
+
+/* h1> h6 */
+$headings-margin: (40px 0, 35px 0, 30px 0, 30px 0, 30px 0, 30px 0);
+$headings-font-size: (44px, 38px, 32px, 28px, 26px, 24px);
+$headings-font-size-mobile: (40px, 32px, 28px, 26px, 24px, 22px);
+$headings-padding: (0, 0, 0, 0, 0, 0);
+$headings-font-family: (initial, initial, initial, initial, initial, initial);
+$headings-font-weight: (normal, normal, normal, normal, normal, normal);
+$headings-line-height: (normal, normal, normal, normal, normal, normal);
+$headings-color: (initial, initial, initial, initial, initial, initial);
+$headings-border: (none, none, none, none, none, none);
+$headings-border-radius: (0, 0, 0, 0, 0, 0);
+$headings-background: (none, none, none, none, none, none);
+
 
 $sizes : (auto, 100,75,50,33,25,0);
 

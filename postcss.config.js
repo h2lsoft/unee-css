@@ -1,0 +1,11 @@
+module.exports = {
+	plugins: [
+		require('postcss-sort-media-queries')({
+			sort: 'desktop-first',
+		}),
+		require('autoprefixer'),
+		require('cssnano')({
+			preset: 'default',
+		}),
+	]
+}

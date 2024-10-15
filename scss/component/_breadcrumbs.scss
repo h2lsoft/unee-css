@@ -71,7 +71,13 @@
 }
 
 
-
+@media only screen and (max-width: map-get($breakpoints, tablet))
+{
+  .breadcrumbs {
+    padding: 0px 15px;
+    margin-top: 20px;
+  }
+}
 
 
 

@@ -4,7 +4,7 @@
   "description": "A lightweight and customizable CSS framework",
   "main": "dist/unee.css",
   "scripts": {
-    "build": "sass scss/unee.scss dist/unee.css && sass scss/unee.scss docs/assets/css/unee.css && sass scss/unee.scss --style compressed dist/unee.min.css"
+    "build": "sass scss/unee.scss dist/unee.css && sass scss/unee.scss docs/assets/css/unee.css && postcss dist/unee.css -o dist/unee.min.css"
   },
   "keywords": [
     "css",
@@ -21,5 +21,15 @@
   },
   "bugs": {
     "url": "https://github.com/h2lsoft/unee-css/issues"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "postcss-sort-media-queries": "^5.2.0"
   }
 }

@@ -1,3 +1,5 @@
+
+
 :root {
 
   /* breakpoints */
@@ -124,18 +126,6 @@
   --hgroup-subtitle-line-height: normal;
   --hgroup-subtitle-color: var(--color-dark);
 
-
-  /* h1> h6 */
-  $headings-margin: (40px 0, 35px 0, 30px 0, 30px 0, 30px 0, 30px 0);
-  $headings-padding: (0, 0, 0, 0, 0, 0);
-  $headings-font-family: (initial, initial, initial, initial, initial, initial);
-  $headings-font-size: (44px, 38px, 32px, 28px, 26px, 24px);
-  $headings-font-weight: (normal, normal, normal, normal, normal, normal);
-  $headings-line-height: (normal, normal, normal, normal, normal, normal);
-  $headings-color: (initial, initial, initial, initial, initial, initial);
-  $headings-border: (none, none, none, none, none, none);
-  $headings-border-radius: (0, 0, 0, 0, 0, 0);
-  $headings-background: (none, none, none, none, none, none);
 
   @for $i from 1 through 6 {
 
@@ -767,7 +757,7 @@
 
   /* component> list-image */
   --list-image-object-fit: contain;
-  --list-image-height: var(--img-thumbnail-size-width);
+  --list-image-height: 120px;
   --list-image-gap: var(--gap-2);
   --list-image-border: 1px solid var(--color-light);
   --list-image-transition: opacity 0.3s ease-in-out;
@@ -794,6 +784,37 @@
   --marquee-animation-position-start:100%;
   --marquee-animation-position-end:-120%;
 
+}
+
+@media only screen and (max-width: 1024px) {
+  :root
+  {
+          --font-size: 18px;
+          --font-size-smaller: 16px;
+          --section-margin: 0px 0;
+          --section-padding: 40px 0;
+          --table-margin: 0px 0;
+
+          /* headings */
+          @for $i from 1 through 6 {
+            --h#{$i}-font-size: #{nth($headings-font-size-mobile, $i)};
+          }
+
+          --unee-spacing: 15px;
+          --unee-spacing-0: 0px;
+          --unee-spacing-1: 15px;
+          --unee-spacing-2: 30px;
+          --unee-spacing-3: 45px;
+          --unee-spacing-4: 60px;
+          --unee-spacing-5: 75px;
+
+          --gap-0: 0px;
+          --gap-1: 10px;
+          --gap-2: 20px;
+          --gap-3: 30px;
+          --gap-4: 40px;
+          --gap-5: 50px;
 
 
+  }
 }

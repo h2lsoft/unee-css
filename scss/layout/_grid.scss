@@ -33,7 +33,7 @@
 @for $i from 1 through 12 {
   .row-cols-#{$i} {grid-template-columns: repeat(#{$i}, 1fr);}
   @include generate-classes('row-cols-#{$i}') {
-	grid-template-columns: repeat(#{$i}, 1fr);
+	grid-template-columns: repeat(#{$i}, 1fr)!important;
   }
 
 }
@@ -71,9 +71,36 @@
   flex: 0 0 100%;
 }
 
+
+
+
 @for $i from 1 through 12 {
-  @include generate-classes('row.row-cols-#{$i}.no-wrap > *', true) {
+
+  .row-cols-#{$i}.no-wrap > * {
+	flex: 0 0 calc(100% / #{$i});
+  }
+
+  @if($i==1)
+  {
+	@include generate-classes('row-cols-#{$i}.no-wrap', false, '.row.no-wrap') {
+	  scroll-snap-type: x mandatory;
+	  overflow-x: scroll;
+	}
+
+	@include generate-classes('row-cols-#{$i}.no-wrap::-webkit-scrollbar', false, '.row.no-wrap') {
+	  display: none;
+	}
+
+  }
+
+
+  @include generate-classes('row-cols-#{$i}.no-wrap > *', false, '.row.no-wrap') {
 	flex: 0 0 calc(100% / #{$i})!important;
+
+	@if($i==1) {
+	  scroll-snap-align: start;
+	}
+
   }
 }
 

@@ -40,3 +40,19 @@
   filter: grayscale(0%);
 }
 
+@media only screen and (max-width: map-get($breakpoints, tablet))
+{
+  .list-image {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .list-image a {
+    display: block;
+    margin: 0px;
+  }
+
+}
+
