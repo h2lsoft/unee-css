@@ -1,15 +1,32 @@
-.border {border: 1px solid var(--color-light);}
-.border-y {border-top: 1px solid var(--color-light); border-bottom: 1px solid var(--color-light);}
-.border-x {border-left: 1px solid var(--color-light); border-right: 1px solid var(--color-light);}
+@include generate-classes("border", true){border: 1px solid var(--color-light);}
+@include generate-classes("border-y", true){border-top: 1px solid var(--color-light); border-bottom: 1px solid var(--color-light);}
+@include generate-classes("border-x", true){border-left: 1px solid var(--color-light); border-right: 1px solid var(--color-light);}
+@include generate-classes("border-l", true){border-left: 1px solid var(--color-light);}
+@include generate-classes("border-s", true){border-left: 1px solid var(--color-light);}
 
-.border-l, .border-s  {border-left: 1px solid var(--color-light);}
-.border-r, .border-e  {border-right: 1px solid var(--color-light);}
-.border-t {border-top: 1px solid var(--color-light);}
-.border-b {border-bottom: 1px solid var(--color-light);}
+@include generate-classes("border-r", true){border-right: 1px solid var(--color-light);}
+@include generate-classes("border-e", true){border-right: 1px solid var(--color-light);}
 
-.border-transparent {border-color:transparent;}
+@include generate-classes("border-t", true){border-top: 1px solid var(--color-light);}
+@include generate-classes("border-b", true){border-bottom: 1px solid var(--color-light);}
 
-.border-light {border-color:var(--color-light);}
+@include generate-classes("border-transparent", true){border-color:transparent;}
+
+@include generate-classes("border-0", true){border-width:0;}
+@include generate-classes("border-1", true){border-width:1px;}
+@include generate-classes("border-2", true){border-width:2px;}
+@include generate-classes("border-3", true){border-width:3px;}
+@include generate-classes("border-4", true){border-width:4px;}
+@include generate-classes("border-5", true){border-width:5px;}
+
+@include generate-classes("rounded", true){border-radius: 5px;}
+@include generate-classes("rounded-0", true){border-radius: 0!important;}
+@include generate-classes("rounded-large", true){border-radius: 25px;}
+
+@include generate-classes("circle", true){border-radius: 50%;}
+
+
+
 .border-light {border-color:var(--color-light);}
 
 .border-primary {border-color:var(--color-primary);}
@@ -27,34 +44,22 @@
 
 .border-success {border-color:var(--color-success);}
 .border-success-light {border-color:var(--color-success-light);}
-.border-success-light-extra {border-color:var(--color-success-light-extra)!important;}
+.border-success-light-extra {border-color:var(--color-success-light-extra);}
 
 .border-danger {border-color:var(--color-danger);}
 .border-danger-light {border-color:var(--color-danger-light);}
-.border-danger-light-extra {border-color:var(--color-danger-light-extra)!important;}
+.border-danger-light-extra {border-color:var(--color-danger-light-extra);}
 
 .border-warning {border-color:var(--color-warning);}
 .border-warning-light {border-color:var(--color-warning-light);}
-.border-warning-light-extra {border-color:var(--color-warning-light-extra)!important;}
+.border-warning-light-extra {border-color:var(--color-warning-light-extra);}
 
 .border-dark {border-color:var(--color-dark-);}
 .border-dark-light {border-color:var(--color-dark-light);}
 .border-dark-light-extra {border-color:var(--color-dark-light-extra);}
 
 
-.border-0 {border-width:0;}
-.border-1 {border-width:1px;}
-.border-2 {border-width:2px;}
-.border-3 {border-width:3px;}
-.border-4 {border-width:4px;}
-.border-5 {border-width:5px;}
 
-.rounded-0 {border-radius: 0!important;}
-.rounded {border-radius: 5px;}
-.rounded-large {border-radius: 25px;}
-
-
-.circle {border-radius: 50%;}
 
 
 
